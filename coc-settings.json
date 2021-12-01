@@ -1,0 +1,18 @@
+{
+  "go.goplsOptions": {
+    "completeUnimported": true
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "diagnostic-languageserver.filetypes": {
+    "go": "golangci-lint"
+  },
+  "diagnostic.checkCurrentLine": false,
+  "diagnostic.virtualText": true,
+  "diagnostic.enable": true,
+  "suggest.enablePreselect": true,
+  "suggest.enablePreview": true,
+  "suggest.detailField": "preview",
+  "suggest.floatEnable": true,
+  "suggest.minTriggerInputLength": 2,
+  "hover.previewMaxHeight": 10
+}
