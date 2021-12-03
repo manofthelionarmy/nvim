@@ -3,6 +3,12 @@ set fileencoding=utf-8
 if has('termguicolors')
   set termguicolors
 endif
+
+" For dark version.
+set background=dark
+colorscheme gruvbox
+" Transparent background
+hi Normal guibg=NONE ctermbg=NONE
  
 " Dev icons
 let g:airline_powerline_fonts = 1
@@ -11,7 +17,10 @@ set number relativenumber
 set hlsearch
 set cursorline
 set autochdir
+"set ignorecase
 set lazyredraw
+set mouse=a
+set pumheight=10
 set clipboard=unnamedplus
 set smartindent
 set scrolloff=8
@@ -20,6 +29,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set splitbelow
+"set timeoutlen=100
+"set title
 set splitright
 set nowrap
 set numberwidth=4
@@ -31,6 +42,7 @@ set smartcase
 " Airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline_stl_path_style = 'short'
 
 " Some stuff to have to make sure that vim-go plays nice with coc-go
 let g:go_def_mapping_enabled = 1

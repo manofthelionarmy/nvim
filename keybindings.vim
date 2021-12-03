@@ -56,4 +56,5 @@ nnoremap <silent> tb :SymbolsOutline<CR>
 
 " Remap shift 
 vnoremap > >gv
-vnoremap \< <gv
+vnoremap < <gv
+
