@@ -53,14 +53,18 @@ nnoremap g, g,zz
 function! PlugLoaded(name)
     return (
         \ has_key(g:plugs, a:name) &&
-        \ isdirectory(g:plugs[a:name].dir))
+        \ isdirectory(g:plugs[a:name].dir) &&
+        \ g:coc_service_initialized == 1) " Be careful: this is a global that may change one day
 endfunction
 
 " SymbolsOutline
 function! ToggleSymbols() 
   if PlugLoaded('coc.nvim')
+    call wait(300, g:coc_service_initialized)
     call plug#load('symbols-outline.nvim')
     lua require('symbols-outline').toggle_outline()
+  else
+    echo("wait a sec, coc.nvim is still initializing")
   endif
 endfunction
 
