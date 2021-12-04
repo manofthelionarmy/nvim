@@ -1,4 +1,6 @@
 " Coc
+" Was trying to figure out how to on demand load symbols outline
+" let g:coc_start_at_startup = v:false
 let g:coc_global_extensions = ['coc-json', 'coc-eslint', 'coc-tsserver', 'coc-sh', 'coc-yaml', 'coc-snippets', 'coc-html', 'coc-prettier', 'coc-css', "coc-ccls", 'coc-go']
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
@@ -51,6 +53,7 @@ else
   inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
+" autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()

@@ -2,10 +2,13 @@
   "go.goplsOptions": {
     "completeUnimported": true
   },
+  "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "diagnostic-languageserver.filetypes": {
     "go": "golangci-lint"
   },
+  "diagnostic.displayByAle": true,
+  "coc.preferences.bracketEnterImprove": true,
   "diagnostic.checkCurrentLine": false,
   "diagnostic.virtualText": true,
   "diagnostic.enable": true,

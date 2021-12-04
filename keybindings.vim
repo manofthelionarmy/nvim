@@ -28,16 +28,16 @@ endif
 
 
 "Barbar
-nnoremap <S-l> :BufferNext<CR>
-nnoremap <S-h> :BufferPrevious<CR>
+nnoremap <silent> <S-l> :BufferNext<CR>
+nnoremap <silent> <S-h> :BufferPrevious<CR>
 
 " NvimTree
 nnoremap <silent> tn :NvimTreeToggle<CR>
 
 
 " Commentary key bindings
-nnoremap \/ :Commentary<CR>
-vnoremap \/ :Commentary<CR>
+nnoremap <silent> \/ :Commentary<CR>
+vnoremap <silent> \/ :Commentary<CR>
 
 " VsCode stuff
 vnoremap J :m '>+1<CR>gv=gv
@@ -50,11 +50,24 @@ nnoremap G Gzz
 nnoremap g; g;zz
 nnoremap g, g,zz
 
+function! PlugLoaded(name)
+    return (
+        \ has_key(g:plugs, a:name) &&
+        \ isdirectory(g:plugs[a:name].dir))
+endfunction
+
 " SymbolsOutline
-nnoremap <silent> tb :SymbolsOutline<CR>
+function! ToggleSymbols() 
+  if PlugLoaded('coc.nvim')
+    call plug#load('symbols-outline.nvim')
+    lua require('symbols-outline').toggle_outline()
+  endif
+endfunction
+
+nnoremap <silent> tb :call ToggleSymbols()<CR>
+nnoremap <silent> \c :BufferClose<CR>
 
 
 " Remap shift 
 vnoremap > >gv
 vnoremap < <gv
-

@@ -18,7 +18,7 @@ else
       auto_open = true,
     },
     diagnostics = {
-      enable = false,
+      enable = true, -- neat, it works with nvim-lsp and coc :)
       icons = {
         hint = "",
         info = "",
