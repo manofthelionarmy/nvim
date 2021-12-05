@@ -30,7 +30,7 @@ Plug 'ellisonleao/gruvbox.nvim'
 Plug 'alvan/vim-closetag', {'for': ['js', 'markdown']}
 Plug 'mattn/emmet-vim', {'for': ['js', 'markdown']}
 " Find another one for auto pairing?
-Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs', {'on': []}
 
 " Live reload of html
 Plug 'turbio/bracey.vim', {'for': ['js', 'markdown', 'html', 'css']} 
