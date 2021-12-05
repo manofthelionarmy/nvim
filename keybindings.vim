@@ -34,6 +34,10 @@ nnoremap <silent> <S-h> :BufferPrevious<CR>
 " NvimTree
 nnoremap <silent> tn :NvimTreeToggle<CR>
 
+" Telescope
+nnoremap <silent> tc :lua require('modules/searchconfigs').search_configs()<CR>
+nnoremap <silent> tl :lua require('modules/searchdir').live_grep()<CR>
+nnoremap <silent> tf :lua require('modules/searchdir').find_files()<CR>
 
 " Commentary key bindings
 nnoremap <silent> \/ :Commentary<CR>
@@ -50,7 +54,7 @@ nnoremap G Gzz
 nnoremap g; g;zz
 nnoremap g, g,zz
 
-function! PlugLoaded(name)
+function! CocLoaded(name)
     return (
         \ has_key(g:plugs, a:name) &&
         \ isdirectory(g:plugs[a:name].dir) &&
@@ -59,8 +63,9 @@ endfunction
 
 " SymbolsOutline
 function! ToggleSymbols() 
-  if PlugLoaded('coc.nvim')
+  if CocLoaded('coc.nvim')
     call wait(300, g:coc_service_initialized)
+    echo(has_key(g:plugs, 'symbols-outline.nvim'))
     call plug#load('symbols-outline.nvim')
     lua require('symbols-outline').toggle_outline()
   else

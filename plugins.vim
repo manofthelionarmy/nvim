@@ -50,6 +50,7 @@ Plug 'nvim-lua/plenary.nvim', {'commit': '1c31adb35fcebe921f65e5c6ff6d5481fa5fa5
 Plug 'nvim-lualine/lualine.nvim', {'commit': '1ae4f0aa74f0b34222c5ef3281b34602a76b2b00'}
 " This commit is before they migrated to neovim 0.5.1
 Plug 'nvim-telescope/telescope.nvim', {'commit': '0caec3d6e4d3c3c71339eb18a9aae7ed0f24badc'}
+Plug 'ahmedkhalf/project.nvim'
 
 Plug 'p00f/nvim-ts-rainbow', {'commit': '54ee09f540935c604c9a3d4aed83b7f5314f2caa'}
 " there's a bug :( it will check if coc exists by calling some functions. coc
@@ -59,4 +60,5 @@ Plug 'simrat39/symbols-outline.nvim', {'commit': 'dcab987e431266c4ec9e2e0e81c1e6
 Plug 'romgrk/barbar.nvim', {'commit': '6e638309efcad2f308eb9c5eaccf6f62b794bbab'}
 Plug 'airblade/vim-rooter'
 " TODO: get which key plugin and terminal, maybe get telescope projects?
+Plug 'glepnir/dashboard-nvim'
 call plug#end()

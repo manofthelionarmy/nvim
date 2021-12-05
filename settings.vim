@@ -17,14 +17,14 @@ set number relativenumber
 set hlsearch
 set cursorline
 set autochdir
-"set ignorecase
+set ignorecase
 set lazyredraw
 set mouse=a
 set pumheight=10
 set clipboard=unnamedplus
 set smartindent
-set scrolloff=8
-set sidescrolloff=8
+" set scrolloff=8
+" set sidescrolloff=8
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -39,12 +39,6 @@ set undofile
 set undodir=/home/armando/.config/nvim/undo
 set signcolumn=yes:1
 set smartcase
-" Airline
-" let g:airline_powerline_fonts = 1
-" let g:airline#extensions#whitespace#enabled = 0
-" let g:airline_stl_path_style = 'short'
-
-"TODO: coc does alot, I wonder if we can use ale to offload diagnostics too
 
 " Some stuff to have to make sure that vim-go plays nice with coc-go
 let g:go_def_mapping_enabled = 0
@@ -68,9 +62,3 @@ let g:ale_change_sign_column_color=0
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
 " let g:ale_linters=[]
-" Tabstops per file type
-" tabstop is for tabs, shiftwidth is, i.e., when you hit enter and want to
-" ceate a new line, and the cursor will travel to the shiftwidth
-" Utils Snips is needed for our reacts snippets, and this prevents
-" UltiSnippets from screwing with our tab completion in coc
-" let g:UltiSnipsExpandTrigger= "<nop>"
