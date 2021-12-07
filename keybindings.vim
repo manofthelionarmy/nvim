@@ -35,9 +35,9 @@ nnoremap <silent> <S-h> :BufferPrevious<CR>
 nnoremap <silent> tn :NvimTreeToggle<CR>
 
 " Telescope
-nnoremap <silent> tc :lua require('modules/searchconfigs').search_configs()<CR>
-nnoremap <silent> tl :lua require('modules/searchdir').live_grep()<CR>
-nnoremap <silent> tf :lua require('modules/searchdir').find_files()<CR>
+nnoremap <silent> <leader>tc :lua require('modules/searchconfigs').search_configs()<CR>
+nnoremap <silent> <leader>tl :lua require('modules/searchdir').live_grep()<CR>
+nnoremap <silent> <leader>tf :lua require('modules/searchdir').find_files()<CR>
 
 " Commentary key bindings
 nnoremap <silent> \/ :Commentary<CR>
