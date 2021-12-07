@@ -79,3 +79,8 @@ nnoremap <silent> \c :BufferClose<CR>
 " Remap shift 
 vnoremap > >gv
 vnoremap < <gv
+
+" GitGutter
+nnoremap <silent> \gp :GitGutterPrevHunk<CR>
+nnoremap <silent> \gn :GitGutterNextHunk<CR>
+nnoremap <silent> \gl :GitGutterUndoHunk<CR>

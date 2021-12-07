@@ -1,4 +1,4 @@
-" set encoding=UTF-8
+ set encoding=UTF-8
 set fileencoding=utf-8
 if has('termguicolors')
   set termguicolors
@@ -10,9 +10,10 @@ colorscheme gruvbox
 " Transparent background
 hi Normal guibg=NONE ctermbg=NONE
  
-" Dev icons
-let g:airline_powerline_fonts = 1
-let g:airline_theme='alduin'
+" let g:gitgutter_sign_added = '▎'
+" let g:gitgutter_sign_modified = '▎'
+" let g:gitgutter_sign_removed = '契'
+" let g:gitgutter_sign_removed_first_line = '契'
 set number relativenumber
 set hlsearch
 set cursorline
@@ -25,8 +26,8 @@ set clipboard=unnamedplus
 set smartindent
 set noscrollbind
 set noswapfile
-" set scrolloff=8
-" set sidescrolloff=8
+set scrolloff=8
+set sidescrolloff=8
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -67,3 +68,4 @@ let g:ale_list_vertical=1
 " let g:ale_linters=[]
 
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufEnter * silent! lcd %:p:h
