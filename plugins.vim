@@ -14,12 +14,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 " Go 
 Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': 'go', 'tag': 'v1.25'}
-" Ultisnips most likely was causing a long load :(
-" Plug 'honza/vim-snippets', {'for': 'js'}
-" Doesn't support lazy loading for some reason
-"Plug 'mlaursen/vim-react-snippets', {'for': 'js'}
-" doesn't support lazy loading for some reason
-"Plug 'maxmellon/vim-jsx-pretty', {'for': 'js'}
+
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
 " Color schemes
@@ -30,7 +25,7 @@ Plug 'ellisonleao/gruvbox.nvim'
 Plug 'alvan/vim-closetag', {'for': ['js', 'markdown']}
 Plug 'mattn/emmet-vim', {'for': ['js', 'markdown']}
 " Find another one for auto pairing?
-Plug 'jiangmiao/auto-pairs', {'on': []}
+Plug 'jiangmiao/auto-pairs'
 
 " Live reload of html
 Plug 'turbio/bracey.vim', {'for': ['js', 'markdown', 'html', 'css']} 
@@ -53,9 +48,6 @@ Plug 'nvim-telescope/telescope.nvim', {'commit': '0caec3d6e4d3c3c71339eb18a9aae7
 Plug 'ahmedkhalf/project.nvim'
 
 Plug 'p00f/nvim-ts-rainbow', {'commit': '54ee09f540935c604c9a3d4aed83b7f5314f2caa'}
-" there's a bug :( it will check if coc exists by calling some functions. coc
-" may not be fully-loaded yet when it does this and coc throws errors: https://github.com/simrat39/symbols-outline.nvim/issues/70 
-" A work around is to migrate from vim plug to packer, but I don't want to 
 Plug 'simrat39/symbols-outline.nvim', {'commit': 'dcab987e431266c4ec9e2e0e81c1e62929c0bd44', 'on':[]}
 Plug 'romgrk/barbar.nvim', {'commit': '6e638309efcad2f308eb9c5eaccf6f62b794bbab'}
 Plug 'airblade/vim-rooter'

@@ -65,7 +65,6 @@ endfunction
 function! ToggleSymbols() 
   if CocLoaded('coc.nvim')
     call wait(300, g:coc_service_initialized)
-    echo(has_key(g:plugs, 'symbols-outline.nvim'))
     call plug#load('symbols-outline.nvim')
     lua require('symbols-outline').toggle_outline()
   else

@@ -1,11 +1,16 @@
 {
   "go.goplsOptions": {
-    "completeUnimported": true
+    "completeUnimported": true,
+    "hoverKind": "SingleLine"
   },
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "diagnostic-languageserver.filetypes": {
     "go": "golangci-lint"
+  },
+  "yaml.schemas": {
+    "url": "globPattern",
+    "Kubernetes": "globPattern"
   },
   "diagnostic.displayByAle": true,
   "coc.preferences.bracketEnterImprove": true,

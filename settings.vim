@@ -23,6 +23,8 @@ set mouse=a
 set pumheight=10
 set clipboard=unnamedplus
 set smartindent
+set noscrollbind
+set noswapfile
 " set scrolloff=8
 " set sidescrolloff=8
 set expandtab
@@ -61,7 +63,7 @@ let g:ale_virtualtext_cursor=0
 let g:ale_change_sign_column_color=0
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
+let g:ale_list_vertical=1
 " let g:ale_linters=[]
 
-" Lazy Load auto pairs on insert enter
-autocmd InsertEnter * call plug#load('auto-pairs')
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
