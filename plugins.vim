@@ -53,4 +53,5 @@ Plug 'romgrk/barbar.nvim', {'commit': '6e638309efcad2f308eb9c5eaccf6f62b794bbab'
 Plug 'airblade/vim-rooter'
 " TODO: get which key plugin and terminal, maybe get telescope projects?
 Plug 'glepnir/dashboard-nvim'
+Plug 'antoinemadec/FixCursorHold.nvim'
 call plug#end()
