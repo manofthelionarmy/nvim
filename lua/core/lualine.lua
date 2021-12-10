@@ -88,7 +88,9 @@ local progress = {
 
 local diagnostics = {
  'diagnostics',
-  sources={'nvim_lsp', 'coc', 'ale'},
+  -- sources={'coc'},
+  -- sources={'coc', 'ale'},
+  sources={'ale'},
   condition = conditions.hide_in_width
 }
 

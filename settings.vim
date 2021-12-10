@@ -1,4 +1,4 @@
- set encoding=UTF-8
+set encoding=UTF-8
 set fileencoding=utf-8
 if has('termguicolors')
   set termguicolors
@@ -24,14 +24,17 @@ set mouse=a
 set pumheight=10
 set clipboard=unnamedplus
 set smartindent
-set noscrollbind
+" for some odd reason, this only works in kitty 🤔, doesn't work for gnome
+" terminal and alacritty
+" set noscrollbind
+" set nocursorbind
 set noswapfile
 set scrolloff=8
 set sidescrolloff=8
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set splitbelow
+" set splitbelow
 "set timeoutlen=100
 "set title
 set splitright
@@ -67,5 +70,5 @@ let g:ale_sign_warning = ''
 let g:ale_list_vertical=1
 " let g:ale_linters=[]
 
-autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 autocmd BufEnter * silent! lcd %:p:h

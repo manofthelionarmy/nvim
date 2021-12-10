@@ -3,11 +3,9 @@
     "completeUnimported": true,
     "hoverKind": "SingleLine"
   },
+  "go.goplsPath": "/home/armando/go/bin/gopls",
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "diagnostic-languageserver.filetypes": {
-    "go": "golangci-lint"
-  },
   "yaml.schemas": {
     "url": "globPattern",
     "Kubernetes": "globPattern"
