@@ -33,7 +33,6 @@ Plug 'turbio/bracey.vim', {'for': ['js', 'markdown', 'html', 'css'], 'do': 'npm 
 " Git in vim
 Plug 'airblade/vim-gitgutter'
 
-" Move to tree sitter
 Plug 'RRethy/vim-hexokinase', {'for': ['js', 'markdown', 'html', 'css'], 'do': 'make hexokinase'}
 " Lua Plugins:
 Plug 'kyazdani42/nvim-web-devicons', {'commit': '8df4988ecf8599fc1f8f387bbf2eae790e4c5ffb'}
@@ -52,7 +51,6 @@ Plug 'p00f/nvim-ts-rainbow', {'commit': '54ee09f540935c604c9a3d4aed83b7f5314f2ca
 Plug 'simrat39/symbols-outline.nvim', {'commit': 'dcab987e431266c4ec9e2e0e81c1e62929c0bd44', 'on':[]}
 Plug 'romgrk/barbar.nvim', {'commit': '6e638309efcad2f308eb9c5eaccf6f62b794bbab'}
 Plug 'airblade/vim-rooter'
-" TODO: get which key plugin
 Plug 'glepnir/dashboard-nvim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'folke/which-key.nvim' 
