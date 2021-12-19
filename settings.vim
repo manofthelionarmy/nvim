@@ -35,7 +35,8 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 " set splitbelow
-"set timeoutlen=100
+" for whichkey
+set timeoutlen=500
 "set title
 set splitright
 set nowrap
@@ -72,3 +73,14 @@ let g:ale_list_vertical=1
 
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 autocmd BufEnter * silent! lcd %:p:h
+
+" Some reason, setlocal overrides our global setting of scrolloff
+" From documentation about setlocal: Like ":set" but set only the value local to the current buffer or window.
+" augroup _dashboard
+"   autocmd! Filetype dashboard setlocal scrolloff=0 sidescrolloff=0
+"   " autocmd! Filetype dashboard setlocal sidescrolloff=0
+"   " autocmd! FileType *.go setlocal scrolloff=8
+" augroup END
+
+" Vertical split help
+" autocmd FileType help wincmd L

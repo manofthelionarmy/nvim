@@ -36,22 +36,24 @@ Plug 'airblade/vim-gitgutter'
 " Move to tree sitter
 Plug 'RRethy/vim-hexokinase', {'for': ['js', 'markdown', 'html', 'css'], 'do': 'make hexokinase'}
 " Lua Plugins:
-" Telescope
 Plug 'kyazdani42/nvim-web-devicons', {'commit': '8df4988ecf8599fc1f8f387bbf2eae790e4c5ffb'}
 Plug 'kyazdani42/nvim-tree.lua', {'commit': 'e842f088847c98da59e14eb543bde11c45c87ef7'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': '0.5-compat'}  " We recommend updating the parsers on update
 Plug 'windwp/nvim-ts-autotag', {'for': ['js', 'html', 'markdown']}
 Plug 'nvim-lua/plenary.nvim', {'commit': '1c31adb35fcebe921f65e5c6ff6d5481fa5fa5ac'}
 Plug 'nvim-lualine/lualine.nvim', {'commit': '1ae4f0aa74f0b34222c5ef3281b34602a76b2b00'}
+" Telescope
 " This commit is before they migrated to neovim 0.5.1
 Plug 'nvim-telescope/telescope.nvim', {'commit': '0caec3d6e4d3c3c71339eb18a9aae7ed0f24badc'}
 Plug 'ahmedkhalf/project.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 Plug 'p00f/nvim-ts-rainbow', {'commit': '54ee09f540935c604c9a3d4aed83b7f5314f2caa'}
 Plug 'simrat39/symbols-outline.nvim', {'commit': 'dcab987e431266c4ec9e2e0e81c1e62929c0bd44', 'on':[]}
 Plug 'romgrk/barbar.nvim', {'commit': '6e638309efcad2f308eb9c5eaccf6f62b794bbab'}
 Plug 'airblade/vim-rooter'
-" TODO: get which key plugin and terminal, maybe get telescope projects?
+" TODO: get which key plugin
 Plug 'glepnir/dashboard-nvim'
 Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'folke/which-key.nvim' 
 call plug#end()

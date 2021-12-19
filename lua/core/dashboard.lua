@@ -58,3 +58,6 @@ vim.g.dashboard_custom_header = {
     " ",
     "     - Jake the Dog, Adventure Time",
 }
+
+-- vim.g.dashboard_preview_file_height = 5
+-- vim.g.dashboard_preview_file_width = 80
