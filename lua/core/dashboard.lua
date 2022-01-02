@@ -1,22 +1,27 @@
 local home_dir = vim.loop.os_homedir()
 local custom_section = {
   a = {
-    description = { "  Find File          " },
+    -- description = { "  Find File          " },
+    description = {"  Find File          "},
     command = "Telescope find_files",
   },
   b = {
+    description = { "  New File           " },
+    command = ":ene!",
+  },
+  c = {
     description = { "  Recent Projects    " },
     command = "Telescope projects",
   },
-  c = {
+  d = {
     description = { "  Recently Used Files" },
     command = "Telescope oldfiles",
   },
-  d = {
+  e = {
     description = { "  Find Word          " },
     command = "Telescope live_grep",
   },
-  e = {
+  f = {
     description = { "  Configuration      " },
     command = "lua require('modules/searchconfigs').search_configs()"
   },

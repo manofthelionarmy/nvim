@@ -34,3 +34,38 @@ require("which-key").setup{
   hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
   show_help = true, -- show help message on the command line when the popup is visible
 }
+
+local mappings = {
+  ["/"] = { ":Commentary<CR>", "Comment" },
+}
+
+local opts = {
+  mode = "n", -- NORMAL mode
+  prefix = "<leader>",
+  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
+}
+-- NOTE: Prefer using : over <cmd> as the latter avoids going back in normal-mode.
+-- see https://neovim.io/doc/user/map.html#:map-cmd
+
+local vmappings = {
+  ["/"] = { ":Commentary<CR>", "Comment" },
+}
+
+local vopts = {
+  mode = "v", -- VISUAL mode
+  prefix = "<leader>",
+  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true, -- use `silent` when creating keymaps
+  noremap = true, -- use `noremap` when creating keymaps
+  nowait = true, -- use `nowait` when creating keymaps
+}
+
+local which_key = require "which-key"
+-- register normal keybindings
+-- which_key.register(mappings, opts)
+-- -- register visual mode keybindings
+-- which_key.register(vmappings, vopts)
+  

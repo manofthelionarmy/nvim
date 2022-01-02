@@ -1,5 +1,7 @@
 " Reminder: zf in normal to create fold, za open fold
 " TMUX
+" NOTE: whichkey could be loading slow because I'm using my kebindings here,
+" need to configure in whichkey.lua
 let g:tmux_navigator_no_mappings = 1
 if exists('$TMUX')
   function! TmuxOrSplitSwitch(wincmd, tmuxdir)
@@ -41,8 +43,8 @@ nnoremap <silent> <leader>tf :lua require('modules/searchdir').find_files()<CR>
 nnoremap <silent> <leader>tt :Telescope find_files<CR>
 
 " Commentary key bindings
-nnoremap <silent> \/ :Commentary<CR>
-vnoremap <silent> \/ :Commentary<CR>
+nnoremap <silent> <leader>/ :Commentary<CR>
+vnoremap <silent> <leader>/ :Commentary<CR>
 
 " VsCode stuff
 vnoremap J :m '>+1<CR>gv=gv
