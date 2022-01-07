@@ -33,10 +33,10 @@ Plug 'turbio/bracey.vim', {'for': ['javascript', 'markdown', 'html', 'css'], 'do
 " Git in vim
 Plug 'airblade/vim-gitgutter'
 
-" Js, TS, JSX
+" Js, TS, JSX, May not need these because of treesitter
 " Plug 'sheerun/vim-polyglot'
-Plug 'pangloss/vim-javascript', {'for':['javascript', 'javascriptreact']}
-Plug 'MaxMEllon/vim-jsx-pretty', {'for':['javascript', 'javascriptreact']}
+" Plug 'pangloss/vim-javascript', {'for':['javascript', 'javascriptreact']}
+" Plug 'MaxMEllon/vim-jsx-pretty', {'for':['javascript', 'javascriptreact']}
 
 Plug 'RRethy/vim-hexokinase', {'for': ['javascript', 'markdown', 'html', 'css'], 'do': 'make hexokinase'}
 " Lua Plugins:

@@ -68,6 +68,9 @@ local treesitter = {
 
 local branch = {
   'branch',
+  -- icon = " ",
+  icon = " ",
+  -- color = { gui = "italic" },
   condition = conditions.hide_in_width
 }
 
@@ -99,8 +102,10 @@ local cfg = {
  options = {
     icons_enabled = true,
     theme = 'auto',
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    -- component_separators = { left = '', right = ''},
+    component_separators = { left = ' ', right = ''},
+    -- section_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
     disabled_filetypes = {"dashboard", "NvimTree", "Outline"},
     always_divide_middle = true,
   },

@@ -26,8 +26,8 @@ set clipboard=unnamedplus
 set smartindent
 " for some odd reason, this only works in kitty 🤔, doesn't work for gnome
 " terminal and alacritty
-" set noscrollbind
-" set nocursorbind
+set noscrollbind
+set nocursorbind
 set noswapfile
 set scrolloff=8
 set sidescrolloff=8

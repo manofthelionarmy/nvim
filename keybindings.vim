@@ -35,6 +35,7 @@ nnoremap <silent> <S-h> :BufferPrevious<CR>
 
 " NvimTree
 nnoremap <silent> tn :NvimTreeToggle<CR>
+nnoremap <silent> \tnf :NvimTreeFindFileToggle<CR>
 
 " Telescope
 nnoremap <silent> <leader>tc :lua require('modules/searchconfigs').search_configs()<CR>
