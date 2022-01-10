@@ -64,4 +64,8 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 " slow, could be faster if we specify our keybindings whichkey.lua
 " TODO: slowly migrate over keybindings from keymappings.vim
 Plug 'folke/which-key.nvim' 
+" Looks not so bad, check ~/.config/nvim/plugged/coc.nvim/doc/coc.txt documentation for 
+" the highlights we need
+" Plug 'mfussenegger/nvim-dap', {'for': ['javascript']}
+" Plug 'Pocco81/DAPInstall.nvim', {'for': ['javascript']}
 call plug#end()
