@@ -35,7 +35,7 @@ nnoremap <silent> <S-h> :BufferPrevious<CR>
 
 " NvimTree
 nnoremap <silent> tn :NvimTreeToggle<CR>
-nnoremap <silent> \tnf :NvimTreeFindFileToggle<CR>
+nnoremap <silent> <leader>tnf :NvimTreeFindFileToggle<CR>
 
 " Telescope
 nnoremap <silent> <leader>tc :lua require('modules/searchconfigs').search_configs()<CR>
@@ -77,7 +77,7 @@ function! ToggleSymbols()
 endfunction
 
 nnoremap <silent> tb :call ToggleSymbols()<CR>
-nnoremap <silent> \c :BufferClose<CR>
+nnoremap <silent> <leader>c :BufferClose!<CR>
 
 
 " Remap shift 
@@ -85,6 +85,31 @@ vnoremap > >gv
 vnoremap < <gv
 
 " GitGutter
-nnoremap <silent> \gp :GitGutterPrevHunk<CR>
-nnoremap <silent> \gn :GitGutterNextHunk<CR>
-nnoremap <silent> \gl :GitGutterUndoHunk<CR>
+nnoremap <silent> <leader>g; :GitGutterPrevHunk<CR>
+nnoremap <silent> <leader>g, :GitGutterNextHunk<CR>
+nnoremap <silent> <leader>gu :GitGutterUndoHunk<CR>
+" Fold non-changes and show all of my current changes. Hit the keys again to unfold
+nnoremap <silent> <leader>gf :GitGutterFold<CR>
+nnoremap <silent> <leader>gs :GitGutterStageHunk<CR>
+
+" TODO: make a command that searchs dirs using telescope
+" Use inspiration from FZF files
+  
+" DAP
+nnoremap <silent> <leader>dt lua require'dap'.toggle_breakpoint()<cr>
+nnoremap <silent> <leader>db lua require'dap'.step_back()<cr>
+nnoremap <silent> <leader>dc lua require'dap'.continue()<cr>
+nnoremap <silent> <leader>dC lua require'dap'.run_to_cursor()<cr>
+nnoremap <silent> <leader>dd lua require'dap'.disconnect()<cr>
+nnoremap <silent> <leader>dg lua require'dap'.session()<<cr>
+nnoremap <silent> <leader>di lua require'dap'.step_into()<cr>
+nnoremap <silent> <leader>do lua require'dap'.step_over()<cr>
+nnoremap <silent> <leader>du lua require'dap'.step_out()<cr>
+nnoremap <silent> <leader>dp lua require'dap'.pause.toggle()<cr> 
+nnoremap <silent> <leader>dr lua require'dap'.repl.toggle()<cr>
+nnoremap <silent> <leader>ds lua require'dap'.continue()<cr>
+nnoremap <silent> <leader>dq lua require'dap'.close()<cr>
+
+" Looks like nvim-tree disables netrw, which needs to be enabled to have gx
+" work. Remapped it so it works
+nnoremap <silent> gx :execute '!xdg-open ' . shellescape(expand('<cfile>'), 1)<CR>

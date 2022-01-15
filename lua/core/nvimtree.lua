@@ -20,7 +20,7 @@ else
     diagnostics = {
       enable = true, -- neat, it works with nvim-lsp and coc :)
       icons = {
-        hint = "",
+        hint = "",
         info = "",
         warning = "",
         error = "",

@@ -13,7 +13,7 @@ Plug 'tpope/vim-sensible'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 " Go 
-Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod', 'template'], 'tag': 'v1.25'}
+" Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod', 'template'], 'tag': 'v1.25'}
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -33,12 +33,7 @@ Plug 'turbio/bracey.vim', {'for': ['javascript', 'markdown', 'html', 'css'], 'do
 " Git in vim
 Plug 'airblade/vim-gitgutter'
 
-" Js, TS, JSX, May not need these because of treesitter
-" Plug 'sheerun/vim-polyglot'
-" Plug 'pangloss/vim-javascript', {'for':['javascript', 'javascriptreact']}
-" Plug 'MaxMEllon/vim-jsx-pretty', {'for':['javascript', 'javascriptreact']}
-
-Plug 'RRethy/vim-hexokinase', {'for': ['javascript', 'markdown', 'html', 'css'], 'do': 'make hexokinase'}
+Plug 'RRethy/vim-hexokinase', {'for': ['markdown', 'html', 'css'], 'do': 'make hexokinase'}
 " Lua Plugins:
 Plug 'kyazdani42/nvim-web-devicons', {'commit': '8df4988ecf8599fc1f8f387bbf2eae790e4c5ffb'}
 Plug 'kyazdani42/nvim-tree.lua', {'commit': 'e842f088847c98da59e14eb543bde11c45c87ef7'}
@@ -64,8 +59,6 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 " slow, could be faster if we specify our keybindings whichkey.lua
 " TODO: slowly migrate over keybindings from keymappings.vim
 Plug 'folke/which-key.nvim' 
-" Looks not so bad, check ~/.config/nvim/plugged/coc.nvim/doc/coc.txt documentation for 
-" the highlights we need
-" Plug 'mfussenegger/nvim-dap', {'for': ['javascript']}
-" Plug 'Pocco81/DAPInstall.nvim', {'for': ['javascript']}
+" Look at nvim-dap for example configs and  'Pocco81/DAPInstall.nvim' too
+Plug 'mfussenegger/nvim-dap', {'for': ['javascript']}
 call plug#end()

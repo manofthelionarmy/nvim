@@ -63,7 +63,7 @@ local vopts = {
   nowait = true, -- use `nowait` when creating keymaps
 }
 
-local which_key = require "which-key"
+-- local which_key = require "which-key"
 -- register normal keybindings
 -- which_key.register(mappings, opts)
 -- -- register visual mode keybindings
