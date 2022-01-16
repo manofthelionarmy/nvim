@@ -51,5 +51,21 @@
     "snippet": " ",
     "typeParameter": " ",
     "default": ""
+  },
+  "hover.floatConfig": {
+    "border": true,
+    "title": " 🙈",
+    "winblend": 10,
+    "maxHeight": 10
+  },
+  "suggest.floatConfig": {
+    "border": true,
+    "title": " 🙈",
+    "winblend": 10
+  },
+  "signature.floatConfig": {
+    "border": true,
+    "title": " 🙈",
+    "winblend": 10
   }
 }

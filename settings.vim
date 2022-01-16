@@ -58,11 +58,14 @@ let g:ale_set_highlights=0
 let g:ale_set_loclist=0
 let g:ale_cursor_detail=0
 let g:ale_set_signs=1
-let g:ale_virtualtext_cursor=0
+let g:ale_virtualtext_cursor=1
 let g:ale_change_sign_column_color=0
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
 let g:ale_list_vertical=1
+let g:ale_sign_info = ''
+" let g:ale_sign_style_error = ''
+" let g:ale_sign_style_warning = ''
 " let g:ale_linters=[]
 
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
