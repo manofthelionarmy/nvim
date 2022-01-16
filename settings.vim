@@ -68,4 +68,7 @@ let g:ale_sign_info = ''
 " let g:ale_sign_style_warning = ''
 " let g:ale_linters=[]
 
-autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd! BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd! BufEnter *.hbs :set ft=html
+" CocDiagnostics filetype is qf and I want to close it
+autocmd! FileType qf nnoremap <silent> <buffer> <Esc> :q<CR>

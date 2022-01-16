@@ -94,7 +94,8 @@ local diagnostics = {
   -- sources={'coc'},
   -- sources={'coc', 'ale'},
   sources={'ale'},
-  condition = conditions.hide_in_width
+  condition = conditions.hide_in_width,
+  -- symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '},
 }
 
 -- Default provided at lualine repo: https://github.com/nvim-lualine/lualine.nvim#default-config
