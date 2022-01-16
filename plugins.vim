@@ -13,7 +13,7 @@ Plug 'tpope/vim-sensible'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 " Go 
-" Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod', 'template'], 'tag': 'v1.25'}
+Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod', 'template'], 'tag': 'v1.25'}
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
