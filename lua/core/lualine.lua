@@ -106,7 +106,7 @@ local cfg = {
     component_separators = { left = ' ', right = ''},
     -- section_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
-    disabled_filetypes = {"dashboard", "NvimTree", "Outline", "coctree"},
+    disabled_filetypes = {"dashboard", "NvimTree", "Outline", "coctree", "help"},
     always_divide_middle = true,
   },
   sections = {
