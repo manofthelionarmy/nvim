@@ -18,7 +18,7 @@ and leave the linting and correcting linting errors to ale.
 Setup for ale involves editing coc-settings.json, setting our linters,
 and setting our linting-fixers.
 
-### Coc Config
+#### Coc Config
 
 First, make sure that these settings in your coc-settings.json file
 are removed:
@@ -28,14 +28,14 @@ are removed:
 
 Make sure to uninstall coc-prettier and coc-eslint.
 
-### Ale global settings
+#### Ale global settings
 
 Next, we need to set some settings in init.vim our a vimscript file
 
 ```
 let g:ale_lint_on_text_changed=0 " Don't let ale eat up resources
 let g:ale_lint_on_insert_leave=1 " We want to only do linting on insert leave
-  let g:ale_lint_on_enter=1      " Or lint on insert enter
+let g:ale_lint_on_enter=1        " Or lint on insert enter
 let g:ale_lint_on_save=1         " Lint on save
 let g:ale_set_highlights=0       " Cosmetic
 let g:ale_set_quickfix = 1       " Ale linting errors will be forwarded to quickfix. Ale and coc-diagnostics share this
@@ -71,13 +71,24 @@ let g:ale_fixers = {
       \}
 ```
 
-### Disclaimer about golangci-lint
+#### Disclaimer about golangci-lint
 
 It's fairly agressive on linting errors. It enforces us to create pkgs
 if we are importing functions external to main pkg. It also errors if we
 aren't checking errors. We can always use another linter.
 
-### Checking for Supported Linters and Fixers
+If we don't want the linting errors above, we set the below to 1.
+
+`let g:ale_go_golangci_lint_package=1`
+
+However, it will lint everything in the current pkg, which means
+it may lint vendored pkgs too :(. This setting sounds very resource 
+intensive so it's better to set to 0. 
+
+
+Check :help ale-go
+
+#### Checking for Supported Linters and Fixers
 
 Run :help ale to find supported linters.
 Run :ALEFixSuggestions and you'll see supported fixers.
