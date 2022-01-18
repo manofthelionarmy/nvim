@@ -46,8 +46,8 @@ let g:go_def_mapping_enabled = 0
 let g:go_code_completion_enabled=0
 let g:go_gopls_enabled = 0
 let g:go_echo_go_info = 0
-let g:go_imports_autosave = 1
-let g:go_fmt_autosave = 1
+let g:go_imports_autosave = 0
+let g:go_fmt_autosave = 0
 
 "Ale
 let g:ale_lint_on_text_changed=0
@@ -75,9 +75,11 @@ let g:ale_fix_on_save=1 "Let ale do the work for autoformatting, not coc
 " let g:ale_sign_style_warning = ''
 
 " Make sure coc-eslint and coc-pretty are uninstalled
+" golangci-lint is fairly aggressive
+" golint is deprecated, it was suggest by golanci-lint to use revive
 let g:ale_linters={
       \ 'javascript': ['prettier', 'eslint'],
-      \ 'go': ['golangci-lint'] 
+      \ 'go': ['gofmt', 'revive'] 
       \}
 let g:ale_go_golangci_lint_executable = 'golangci-lint'
 let g:ale_go_golangci_lint_options = '' " don't use the default
@@ -86,10 +88,11 @@ let g:ale_go_golangci_lint_options = '' " don't use the default
 " Must have fixers installed, globally for golang, locally for javascript
 let g:ale_fixers = {
       \ 'javascript': ['eslint'],
-      \ 'go': ['gofumpt', 'gofmt'],
+      \ 'go': ['gofmt', 'goimports'],
       \}
 
-autocmd! BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+" Looks like ale fixers fixes this if I include goimports
+" autocmd! BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 autocmd! BufEnter *.hbs :set ft=html
 " CocDiagnostics filetype is qf and I want to close it
 autocmd! FileType qf nnoremap <silent> <buffer> <Esc> :q<CR>

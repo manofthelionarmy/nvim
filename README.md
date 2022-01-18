@@ -100,6 +100,12 @@ are removed:
 "coc.preferences.formatOnSaveFiletypes": ["*"]
 "coc.preferences.formatOnType": true <- this is set to false by default
 ```
+
+And make sure this is set to false:
+```
+"diagnostic.enable": false
+"diagnostic.displayByAle": true
+```
 Make sure to uninstall coc-prettier and coc-eslint and remove them from 
 `g:coc_global_extensions` if you have them within the list.
 
@@ -136,6 +142,10 @@ Ex:
 bash~$: go get <golangci-lint>
 
 bash~$: npm install --save-dev <eslint/prettier>
+
+OR:
+
+bash!$: npx eslint --init (the better option)
 ```
 
 ```
@@ -174,5 +184,5 @@ Check :help ale-go
 
 #### Checking for Supported Linters and Fixers
 
-Run :help ale to find supported linters.
+Run :help ale to find supported linters or :ALEInfo while in a specific filetype.
 Run :ALEFixSuggestions and you'll see supported fixers.

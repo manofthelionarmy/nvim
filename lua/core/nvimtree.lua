@@ -36,7 +36,7 @@ else
       args = {}
     },
     filters = {
-      dotfiles = true,
+      dotfiles = false,
       custom = {}
     },
     git = {
