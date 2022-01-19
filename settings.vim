@@ -4,9 +4,23 @@ if has('termguicolors')
   set termguicolors
 endif
 
-" For dark version.
+let g:tokyonight_style="night"
+let g:tokyonight_hide_inactive_statusline=1
+let g:tokyonight_transparent_sidebar=1
+let g:tokyonight_lualine_bold=1
+let g:tokyonight_transparent=1
+let g:tokyonight_italic_comments=1
+let g:tokyonight_italic_functions = 1    
+let g:tokyonight_terminal_colors=1
+let g:tokyonight_lualine_bold=1
+augroup MyColors
+	autocmd!
+	autocmd ColorScheme * highlight LineNr guifg=#5081c0   | highlight CursorLineNR guifg=#FFba00
+augroup END
+
 set background=dark
-colorscheme gruvbox
+colorscheme tokyonight
+
 " Transparent background
 hi Normal guibg=NONE ctermbg=NONE
 

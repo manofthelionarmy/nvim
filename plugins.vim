@@ -1,7 +1,7 @@
 set nocompatible
 " Documentation said to set this value before loading plugins
 let g:ale_disable_lsp = 1
-call plug#begin()
+call plug#begin("~/.config/nvim/plugged")
 " Plugin Manager
 Plug 'junegunn/vim-plug'
 " Git Plugin for Vim
@@ -18,9 +18,9 @@ Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod', 'templ
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
 " Color schemes
-Plug 'rktjmp/lush.nvim'
-Plug 'ellisonleao/gruvbox.nvim'
-" Plug 'morhetz/gruvbox'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+" Plug 'ellisonleao/gruvbox.nvim' " double check, the color scheme is too bright
+"
 " -- Etc
 " I can always reinstall this if I ever find the use for it
 " Plug 'mattn/emmet-vim', {'for': ['js', 'markdown']}
@@ -43,7 +43,7 @@ Plug 'nvim-lua/plenary.nvim', {'commit': '1c31adb35fcebe921f65e5c6ff6d5481fa5fa5
 Plug 'nvim-lualine/lualine.nvim', {'commit': '1ae4f0aa74f0b34222c5ef3281b34602a76b2b00'}
 " Telescope
 " This commit is before they migrated to neovim 0.5.1
-Plug 'nvim-telescope/telescope.nvim', {'commit': '0caec3d6e4d3c3c71339eb18a9aae7ed0f24badc'}
+Plug 'nvim-telescope/telescope.nvim' ", {'commit': '0caec3d6e4d3c3c71339eb18a9aae7ed0f24badc'}
 Plug 'ahmedkhalf/project.nvim'
 " I don't understand what this plugin does
 " Plug 'nvim-telescope/telescope-fzy-nateeive.nvim'

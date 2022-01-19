@@ -55,17 +55,14 @@
     "title": " 🙈",
     "winblend": 10,
     "maxHeight": 10,
-    "highlight": "GruvboxGreen"
   },
   "suggest.floatConfig": {
     "border": true,
     "winblend": 10,
-    "highlight": "GruvboxGreen"
   },
   "signature.floatConfig": {
     "border": true,
     "title": " 🙈",
     "winblend": 10,
-    "highlight": "GruvboxGreen"
   }
 }
