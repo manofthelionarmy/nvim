@@ -96,19 +96,19 @@ nnoremap <silent> <leader>gs :GitGutterStageHunk<CR>
 " Use inspiration from FZF files
   
 " DAP
-nnoremap <silent> <leader>dt lua require'dap'.toggle_breakpoint()<cr>
-nnoremap <silent> <leader>db lua require'dap'.step_back()<cr>
-nnoremap <silent> <leader>dc lua require'dap'.continue()<cr>
-nnoremap <silent> <leader>dC lua require'dap'.run_to_cursor()<cr>
-nnoremap <silent> <leader>dd lua require'dap'.disconnect()<cr>
-nnoremap <silent> <leader>dg lua require'dap'.session()<<cr>
-nnoremap <silent> <leader>di lua require'dap'.step_into()<cr>
-nnoremap <silent> <leader>do lua require'dap'.step_over()<cr>
-nnoremap <silent> <leader>du lua require'dap'.step_out()<cr>
-nnoremap <silent> <leader>dp lua require'dap'.pause.toggle()<cr> 
-nnoremap <silent> <leader>dr lua require'dap'.repl.toggle()<cr>
-nnoremap <silent> <leader>ds lua require'dap'.continue()<cr>
-nnoremap <silent> <leader>dq lua require'dap'.close()<cr>
+nnoremap <silent> <leader>dt :lua require'dap'.toggle_breakpoint()<cr>
+nnoremap <silent> <leader>db :lua require'dap'.step_back()<cr>
+nnoremap <silent> <leader>dc :lua require'dap'.continue()<cr>
+nnoremap <silent> <leader>dC :lua require'dap'.run_to_cursor()<cr>
+nnoremap <silent> <leader>dd :lua require'dap'.disconnect()<cr>
+nnoremap <silent> <leader>dg :lua require'dap'.session()<<cr>
+nnoremap <silent> <leader>di :lua require'dap'.step_into()<cr>
+nnoremap <silent> <leader>do :lua require'dap'.step_over()<cr>
+nnoremap <silent> <leader>du :lua require'dap'.step_out()<cr>
+nnoremap <silent> <leader>dp :lua require'dap'.pause.toggle()<cr> 
+nnoremap <silent> <leader>dr :lua require'dap'.repl.toggle()<cr>
+nnoremap <silent> <leader>ds :lua require'dap'.continue()<cr>
+nnoremap <silent> <leader>dq :lua require'dap'.close()<cr>
 
 " Looks like nvim-tree disables netrw, which needs to be enabled to have gx
 " work. Remapped it so it works

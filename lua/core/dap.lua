@@ -35,7 +35,7 @@ dap.set_log_level('ERROR')
 -- meaning!!! I have to have more than one configuration for javascript so I can select the right one!!!
 -- Manually install debugging packages too.
 -- this is where I store my debug adapaters... I wonder if I should point to the same ones in vimspector
-local debug_adapters_pth = os.getenv('HOME') .. '/.config/dap_adapaters/'
+local debug_adapters_pth = os.getenv('HOME') .. '/.config/dap_adapters/'
 
 dap.adapters.firefox = {
   type = 'executable',
@@ -79,16 +79,14 @@ local debug_with_node_launch = {
 }
 
 local debug_with_node_attach = {
-  {
-    name = 'Debug with Node, Attach',
-    type = "node2",
-    request = 'launch',
-    program = '${file}',
-    cwd = vim.fn.getcwd(),
-    protocol = 'inspector',
-    console = 'integratedTerminal',
-    processId = require'dap.utils'.pick_process,
-  }
+  name = 'Debug with Node, Attach',
+  type = "node2",
+  request = 'attach',
+  program = '${file}',
+  cwd = vim.fn.getcwd(),
+  protocol = 'inspector',
+  console = 'integratedTerminal',
+  processId = require'dap.utils'.pick_process,
 }
 
 -- may not need this one
