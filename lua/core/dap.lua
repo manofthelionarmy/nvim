@@ -23,7 +23,7 @@ local cfg = {
 local dap = require("dap")
 
 -- See other configs or defaults I can override
-dap.defaults.fallback.terminal_win_cmd = "50vsplit new"
+dap.defaults.fallback.terminal_win_cmd = "tabnew"
 
 vim.fn.sign_define("DapBreakpoint", cfg.breakpoint)
 vim.fn.sign_define("DapBreakpointRejected", cfg.breakpoint_rejected)
@@ -129,4 +129,5 @@ dap.configurations.javascript = {
 --   s = { "<cmd>lua require'dap'.continue()<cr>", "Start" },
 --   q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
 -- }
+-- vim.cmd[["autocmd FileType *.js call lua require('dap-ui')"]]
 

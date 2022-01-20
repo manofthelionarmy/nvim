@@ -61,4 +61,5 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'folke/which-key.nvim' 
 " Look at nvim-dap for example configs and  'Pocco81/DAPInstall.nvim' too
 Plug 'mfussenegger/nvim-dap', {'for': ['javascript']}
+Plug 'rcarriga/nvim-dap-ui', {'for': ['javascript']}
 call plug#end()

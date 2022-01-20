@@ -15,7 +15,7 @@ let g:tokyonight_terminal_colors=1
 let g:tokyonight_lualine_bold=1
 augroup MyColors
 	autocmd!
-	autocmd ColorScheme * highlight LineNr guifg=#5081c0   | highlight CursorLineNR guifg=#FFba00
+	autocmd ColorScheme * hi LineNr guifg=#5081c0   | hi CursorLineNR guifg=#FFba00 | hi Comment guifg=#5081c0 gui=italic
 augroup END
 
 set background=dark
