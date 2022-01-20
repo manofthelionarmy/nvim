@@ -19,7 +19,7 @@ Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod', 'templ
 Plug 'christoomey/vim-tmux-navigator'
 " Color schemes
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-" Plug 'ellisonleao/gruvbox.nvim' " double check, the color scheme is too bright
+Plug 'ellisonleao/gruvbox.nvim' " double check, the color scheme is too bright
 "
 " -- Etc
 " I can always reinstall this if I ever find the use for it

@@ -25,6 +25,7 @@ augroup MyColors
         \ | hi WarningMsg gui=undercurl
         \ | hi AleWarningLine gui=undercurl,bold,italic guifg=orange
         \ | hi TSKeyword gui=bold,italic
+        \ | hi DashboardHeader guifg=#fe8019
 augroup END
 
 augroup MyFloat
@@ -33,7 +34,7 @@ augroup MyFloat
 augroup END
 
 set background=dark
-colorscheme tokyonight
+colorscheme gruvbox
 
 " Transparent background
 hi Normal guibg=NONE ctermbg=NONE
