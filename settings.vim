@@ -24,9 +24,11 @@ augroup MyColors
         \ | hi ErrorMsg gui=undercurl
         \ | hi WarningMsg gui=undercurl
         \ | hi AleWarningLine gui=undercurl,bold,italic guifg=orange
-        \ | hi TSKeyword gui=bold,italic
+        \ | hi TSKeyword gui=bold,italic | hi Keyword gui=bold,italic
+        \ | hi Todo gui=bold
 augroup END
 
+" TODO:
 augroup MyFloat
 	autocmd!
 	autocmd ColorScheme * hi NormalFloat guifg=#5081c0 gui=italic,bold

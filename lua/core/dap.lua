@@ -129,5 +129,3 @@ dap.configurations.javascript = {
 --   s = { "<cmd>lua require'dap'.continue()<cr>", "Start" },
 --   q = { "<cmd>lua require'dap'.close()<cr>", "Quit" },
 -- }
--- vim.cmd[["autocmd FileType *.js call lua require('dap-ui')"]]
-

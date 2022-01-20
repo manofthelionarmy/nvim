@@ -37,7 +37,7 @@ else
     },
     filters = {
       dotfiles = false,
-      custom = {}
+      custom = {"node_modules", ".git", ".cache", "vendor"}
     },
     git = {
       enable = true,

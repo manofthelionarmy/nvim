@@ -107,7 +107,8 @@ nnoremap <silent> <leader>do :lua require'dap'.step_over()<cr>
 nnoremap <silent> <leader>du :lua require'dap'.step_out()<cr>
 nnoremap <silent> <leader>dp :lua require'dap'.pause.toggle()<cr> 
 nnoremap <silent> <leader>dr :lua require'dap'.repl.toggle()<cr>
-nnoremap <silent> <leader>ds :lua require'dap'.continue()<cr>
+" FIXME:
+nnoremap <silent> <leader>ds :lua require'dap'.continue()<cr> 
 nnoremap <silent> <leader>dq :lua require'dap'.close()<cr>
 
 " Looks like nvim-tree disables netrw, which needs to be enabled to have gx
