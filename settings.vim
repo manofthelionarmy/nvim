@@ -13,9 +13,17 @@ let g:tokyonight_italic_comments=1
 let g:tokyonight_italic_functions = 1    
 let g:tokyonight_terminal_colors=1
 let g:tokyonight_lualine_bold=1
+let g:tokyonight_italic_variables=1
+
 augroup MyColors
 	autocmd!
-	autocmd ColorScheme * hi LineNr guifg=#5081c0   | hi CursorLineNR guifg=#FFba00 | hi Comment guifg=#5081c0 gui=italic
+	autocmd ColorScheme * hi LineNr guifg=#5081c0 
+        \ | hi CursorLineNR guifg=#FFba00
+        \ | hi Comment guifg=#5081c0 gui=italic
+        \ | hi Function gui=bold,italic
+        \ | hi ErrorMsg gui=undercurl
+        \ | hi WarningMsg gui=undercurl
+        \ | hi AleWarningLine gui=undercurl
 augroup END
 
 set background=dark
