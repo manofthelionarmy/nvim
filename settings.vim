@@ -26,6 +26,11 @@ augroup MyColors
         \ | hi AleWarningLine gui=undercurl
 augroup END
 
+augroup MyFloat
+	autocmd!
+	autocmd ColorScheme * hi NormalFloat guifg=#5081c0 gui=italic,bold
+augroup END
+
 set background=dark
 colorscheme tokyonight
 
