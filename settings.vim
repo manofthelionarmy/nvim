@@ -23,7 +23,8 @@ augroup MyColors
         \ | hi Function gui=bold,italic
         \ | hi ErrorMsg gui=undercurl
         \ | hi WarningMsg gui=undercurl
-        \ | hi AleWarningLine gui=undercurl
+        \ | hi AleWarningLine gui=undercurl,bold,italic guifg=orange
+        \ | hi TSKeyword gui=bold,italic
 augroup END
 
 augroup MyFloat
