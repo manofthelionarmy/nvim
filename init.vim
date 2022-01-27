@@ -1,4 +1,5 @@
 source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/colorscheme.vim
 source ~/.config/nvim/settings.vim
 source ~/.config/nvim/coc.vim
 source ~/.config/nvim/keybindings.vim

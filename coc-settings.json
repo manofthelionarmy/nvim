@@ -10,9 +10,9 @@
   },
   "diagnostic.displayByAle": true,
   "coc.preferences.bracketEnterImprove": true,
-  "diagnostic.checkCurrentLine": false,
-  "diagnostic.virtualText": false,
-  "diagnostic.enable": false,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.enable": true,
   "suggest.enablePreselect": true,
   "suggest.enablePreview": true,
   "suggest.detailField": "preview",
@@ -54,15 +54,18 @@
     "border": true,
     "title": " 🙈",
     "winblend": 10,
-    "maxHeight": 10,
+    "maxHeight": 10
   },
   "suggest.floatConfig": {
     "border": true,
-    "winblend": 10,
+    "winblend": 10
   },
   "signature.floatConfig": {
     "border": true,
     "title": " 🙈",
-    "winblend": 10,
-  }
+    "winblend": 10
+  },
+  "java.format.enabled": true,
+  "java.format.comments.enabled": true,
+  "java.format.onType.enabled": true
 }

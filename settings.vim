@@ -4,36 +4,6 @@ if has('termguicolors')
   set termguicolors
 endif
 
-let g:tokyonight_style="night"
-let g:tokyonight_hide_inactive_statusline=1
-let g:tokyonight_transparent_sidebar=1
-let g:tokyonight_lualine_bold=1
-let g:tokyonight_transparent=1
-let g:tokyonight_italic_comments=1
-let g:tokyonight_italic_functions = 1    
-let g:tokyonight_terminal_colors=1
-let g:tokyonight_lualine_bold=1
-let g:tokyonight_italic_variables=1
-
-augroup MyColors
-	autocmd!
-	autocmd ColorScheme * hi LineNr guifg=#5081c0 
-        \ | hi CursorLineNR guifg=#FFba00
-        \ | hi Comment guifg=#5081c0 gui=italic
-        \ | hi Function gui=bold,italic
-        \ | hi ErrorMsg gui=undercurl
-        \ | hi WarningMsg gui=undercurl
-        \ | hi AleWarningLine gui=undercurl,bold,italic guifg=orange
-        \ | hi TSKeyword gui=bold,italic | hi Keyword gui=bold,italic
-        \ | hi Todo gui=bold
-augroup END
-
-" TODO:
-augroup MyFloat
-	autocmd!
-	autocmd ColorScheme * hi NormalFloat guifg=#5081c0 gui=italic,bold
-augroup END
-
 set background=dark
 colorscheme tokyonight
 
@@ -67,9 +37,12 @@ set nowrap
 set numberwidth=4
 " be wary of undofile, I don't want colliding undodirectory with lvim
 set undofile
-set undodir=/home/armando/.config/nvim/undo
+set undodir=$HOME/.config/nvim/undo
 set signcolumn=yes
 set smartcase
+set nolinebreak
+set noshowmode
+set incsearch
 
 " Some stuff to have to make sure that vim-go plays nice with coc-go
 let g:go_def_mapping_enabled = 0
@@ -102,28 +75,27 @@ let g:ale_sign_warning = ''
 let g:ale_list_vertical=1
 let g:ale_sign_info = ''
 let g:ale_fix_on_save=1 "Let ale do the work for autoformatting, not coc
-" let g:ale_sign_style_error = ''
-" let g:ale_sign_style_warning = ''
 
 " Make sure coc-eslint and coc-pretty are uninstalled
 " golangci-lint is fairly aggressive
 " golint is deprecated, it was suggest by golanci-lint to use revive
 let g:ale_linters={
       \ 'javascript': ['prettier', 'eslint'],
-      \ 'go': ['gofmt', 'revive'] 
+      \ 'go': ['gopls', 'revive', 'gofmt', 'golint'],
       \}
 let g:ale_go_golangci_lint_executable = 'golangci-lint'
 let g:ale_go_golangci_lint_options = '' " don't use the default
-" let g:ale_go_golangci_lint_options = '--enable-all' enable all linters
 
 " Must have fixers installed, globally for golang, locally for javascript
 let g:ale_fixers = {
-      \ 'javascript': ['eslint'],
+      \ 'javascript': ['eslint', 'prettier'],
       \ 'go': ['gofmt', 'goimports'],
       \}
+let g:ale_java_checkstyle_config="/home/armando/.config/checkstyle/google_checks.xml"
 
 " Looks like ale fixers fixes this if I include goimports
 " autocmd! BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 autocmd! BufEnter *.hbs :set ft=html
+
 " CocDiagnostics filetype is qf and I want to close it
 autocmd! FileType qf nnoremap <silent> <buffer> <Esc> :q<CR>
