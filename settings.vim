@@ -1,4 +1,4 @@
-set encoding=UTF-8
+set encoding=utf-8
 set fileencoding=utf-8
 if has('termguicolors')
   set termguicolors
@@ -90,6 +90,7 @@ let g:ale_go_golangci_lint_options = '' " don't use the default
 let g:ale_fixers = {
       \ 'javascript': ['eslint', 'prettier'],
       \ 'go': ['gofmt', 'goimports'],
+      \ 'sql': ['pgformatter']
       \}
 let g:ale_java_checkstyle_config="/home/armando/.config/checkstyle/google_checks.xml"
 
@@ -99,3 +100,5 @@ autocmd! BufEnter *.hbs :set ft=html
 
 " CocDiagnostics filetype is qf and I want to close it
 autocmd! FileType qf nnoremap <silent> <buffer> <Esc> :q<CR>
+autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
+autocmd FileType dashboard setlocal scrolloff=0 | autocmd WinLeave <buffer> setlocal scrolloff=-1

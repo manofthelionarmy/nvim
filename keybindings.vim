@@ -76,7 +76,7 @@ function! ToggleSymbols()
   endif
 endfunction
 
-nnoremap <silent> tb :call ToggleSymbols()<CR>
+nnoremap <silent> <leader>tb :call ToggleSymbols()<CR>
 nnoremap <silent> <leader>c :BufferClose!<CR>
 
 

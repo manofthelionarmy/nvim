@@ -11,7 +11,8 @@ let g:coc_global_extensions = [
       \ 'coc-ccls',
       \ 'coc-java',
       \ 'coc-vimlsp',
-      \ 'coc-sql'
+      \ 'coc-sql',
+      \ 'coc-docker'
       \ ]
 " Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim

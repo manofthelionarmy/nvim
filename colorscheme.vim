@@ -23,7 +23,6 @@ augroup MyColors
         \ | hi Todo gui=bold
 augroup END
 
-" TODO:
 augroup MyFloat
 	autocmd!
 	autocmd ColorScheme * hi NormalFloat guifg=#5081c0 gui=italic,bold
