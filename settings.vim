@@ -79,6 +79,7 @@ let g:ale_fix_on_save=1 "Let ale do the work for autoformatting, not coc
 " Make sure coc-eslint and coc-pretty are uninstalled
 " golangci-lint is fairly aggressive
 " golint is deprecated, it was suggest by golanci-lint to use revive
+" TODO: get protobuf linter
 let g:ale_linters={
       \ 'javascript': ['prettier', 'eslint'],
       \ 'go': ['gopls', 'revive', 'gofmt', 'golint'],
@@ -87,9 +88,10 @@ let g:ale_go_golangci_lint_executable = 'golangci-lint'
 let g:ale_go_golangci_lint_options = '' " don't use the default
 
 " Must have fixers installed, globally for golang, locally for javascript
+" TODO: setup protobuf fixer
 let g:ale_fixers = {
       \ 'javascript': ['eslint', 'prettier'],
-      \ 'go': ['gofmt', 'goimports'],
+      \ 'go': ['gofmt', 'goimports','remove_trailing_lines'],
       \ 'sql': ['pgformatter']
       \}
 let g:ale_java_checkstyle_config="/home/armando/.config/checkstyle/google_checks.xml"

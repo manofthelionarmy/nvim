@@ -13,7 +13,7 @@ Plug 'tpope/vim-sensible'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 " Go 
-Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod', 'template'], 'tag': 'v1.25'}
+Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod'], 'tag': 'v1.25'}
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -50,6 +50,7 @@ Plug 'ahmedkhalf/project.nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
 
 Plug 'p00f/nvim-ts-rainbow', {'commit': '54ee09f540935c604c9a3d4aed83b7f5314f2caa'}
+" I have coc-outline, remove this plugin?
 Plug 'simrat39/symbols-outline.nvim', {'commit': 'dcab987e431266c4ec9e2e0e81c1e62929c0bd44', 'on':[]}
 Plug 'romgrk/barbar.nvim', {'commit': '6e638309efcad2f308eb9c5eaccf6f62b794bbab'}
 Plug 'airblade/vim-rooter'

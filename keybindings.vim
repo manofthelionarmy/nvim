@@ -65,7 +65,7 @@ function! CocLoaded(name)
         \ g:coc_service_initialized == 1) " Be careful: this is a global that may change one day
 endfunction
 
-" SymbolsOutline
+" SymbolsOutline, should I use CocOutline instead?
 function! ToggleSymbols() 
   if CocLoaded('coc.nvim')
     call wait(300, g:coc_service_initialized)
