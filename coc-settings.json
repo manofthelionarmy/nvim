@@ -3,7 +3,7 @@
     "completeUnimported": true,
     "hoverKind": "SingleLine"
   },
-  "go.goplsPath": "/home/armando/go/bin/gopls",
+  "go.goplsPath": "~/go/bin/gopls",
   "yaml.schemas": {
     "url": "globPattern",
     "Kubernetes": "globPattern"
