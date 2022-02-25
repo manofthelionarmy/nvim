@@ -38,11 +38,30 @@ local scrollbar = {
 --     }
 --   end
 -- end
+local colors = {
+  bg = "#202328",
+  fg = "#bbc2cf",
+  yellow = "#ECBE7B",
+  cyan = "#008080",
+  darkblue = "#081633",
+  green = "#98be65",
+  orange = "#FF8800",
+  violet = "#a9a1e1",
+  magenta = "#c678dd",
+  purple = "#c678dd",
+  blue = "#51afef",
+  red = "#ec5f67",
+}
 
 local diff = {
   'diff',
   source = 'coc',
-  symbols = { added = "  ", modified = "柳", removed = " " },
+  symbols = { added = " ", modified = "柳", removed = " " },
+  diff_color = {
+    added = { fg = colors.green },
+    modified = { fg = colors.yellow },
+    removed = { fg = colors.red },
+  },
   color = {},
   condition = conditions.hide_in_width,
 }
