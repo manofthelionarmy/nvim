@@ -102,5 +102,9 @@ autocmd! BufEnter *.hbs :set ft=html
 
 " CocDiagnostics filetype is qf and I want to close it
 autocmd! FileType qf nnoremap <silent> <buffer> <Esc> :q<CR>
-autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
-autocmd FileType dashboard setlocal scrolloff=0 | autocmd WinLeave <buffer> setlocal scrolloff=-1
+augroup Dashboard
+  autocmd!
+  au FileType dashboard set showtabline=0 | setlocal scrolloff=0 |
+        \ autocmd WinLeave <buffer> set showtabline=2 |
+        \ autocmd WinLeave <buffer> setlocal scrolloff=-1
+augroup END
