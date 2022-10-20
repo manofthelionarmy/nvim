@@ -42,6 +42,7 @@ nnoremap <silent> <leader>tc :lua require('modules/searchconfigs').search_config
 nnoremap <silent> <leader>tl :lua require('modules/searchdir').live_grep()<CR>
 nnoremap <silent> <leader>tf :lua require('modules/searchdir').find_files()<CR>
 nnoremap <silent> <leader>tt :Telescope find_files<CR>
+nnoremap <silent> <Space>td :lua require('telescope.builtin').find_files({ cwd = vim.fn.expand('%:p:h') })<CR>
 
 " Commentary key bindings
 nnoremap <silent> <leader>/ :Commentary<CR>
@@ -66,17 +67,17 @@ function! CocLoaded(name)
 endfunction
 
 " SymbolsOutline, should I use CocOutline instead?
-function! ToggleSymbols() 
-  if CocLoaded('coc.nvim')
-    call wait(300, g:coc_service_initialized)
-    call plug#load('symbols-outline.nvim')
-    lua require('symbols-outline').toggle_outline()
-  else
-    echo("wait a sec, coc.nvim is still initializing")
-  endif
-endfunction
+" function! ToggleSymbols() 
+"   if CocLoaded('coc.nvim')
+"     call wait(300, g:coc_service_initialized)
+"     call plug#load('symbols-outline.nvim')
+"     lua require('symbols-outline').toggle_outline()
+"   else
+"     echo("wait a sec, coc.nvim is still initializing")
+"   endif
+" endfunction
 
-nnoremap <silent> <leader>tb :call ToggleSymbols()<CR>
+nnoremap <silent> <space>tb :CocOutline<CR>
 nnoremap <silent> <leader>c :BufferClose!<CR>
 
 
@@ -92,8 +93,6 @@ nnoremap <silent> <leader>gu :GitGutterUndoHunk<CR>
 nnoremap <silent> <leader>gf :GitGutterFold<CR>
 nnoremap <silent> <leader>gs :GitGutterStageHunk<CR>
 
-" TODO: make a command that searchs dirs using telescope
-" Use inspiration from FZF files
   
 " DAP
 nnoremap <silent> <leader>dt :lua require'dap'.toggle_breakpoint()<cr>

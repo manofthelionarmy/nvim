@@ -5,10 +5,24 @@ if has('termguicolors')
 endif
 
 set background=dark
-colorscheme tokyonight
+
+function! SetColorScheme(mycolorscheme)
+  if a:mycolorscheme == "dracula"
+    source ~/.config/nvim/lua/core/dracula.vim 
+    colorscheme dracula
+  elseif a:mycolorscheme == "tokyonight"
+    source ~/.config/nvim/lua/core/tokyonight.vim 
+    colorscheme tokyonight
+  endif
+endfunction
+
+let mycolorscheme = "dracula"
+call SetColorScheme(mycolorscheme)
 
 " Transparent background
 hi Normal guibg=NONE ctermbg=NONE
+
+" TODO: Set leader key to <Space>
 
 set number relativenumber
 set hlsearch
@@ -82,6 +96,7 @@ let g:ale_fix_on_save=1 "Let ale do the work for autoformatting, not coc
 " TODO: get protobuf linter
 let g:ale_linters={
       \ 'javascript': ['prettier', 'eslint'],
+      \ 'javascriptreact': ['prettier', 'eslint'],
       \ 'go': ['gopls', 'revive', 'gofmt', 'golint'],
       \}
 let g:ale_go_golangci_lint_executable = 'golangci-lint'
@@ -91,6 +106,7 @@ let g:ale_go_golangci_lint_options = '' " don't use the default
 " TODO: setup protobuf fixer
 let g:ale_fixers = {
       \ 'javascript': ['eslint', 'prettier'],
+      \ 'javascriptreact': ['eslint', 'prettier'],
       \ 'go': ['gofmt', 'goimports','remove_trailing_lines'],
       \ 'sql': ['pgformatter']
       \}
@@ -108,3 +124,6 @@ augroup Dashboard
         \ autocmd WinLeave <buffer> set showtabline=2 |
         \ autocmd WinLeave <buffer> setlocal scrolloff=-1
 augroup END
+
+" Sass completion?
+autocmd FileType scss setl iskeyword+=@-@

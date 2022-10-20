@@ -19,8 +19,9 @@ Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod'], 'tag'
 Plug 'christoomey/vim-tmux-navigator'
 " Color schemes
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'Mofiqul/dracula.nvim', {'branch': 'main'}
 " Plug 'ellisonleao/gruvbox.nvim' " double check, the color scheme is too bright
-"
+Plug 'navarasu/onedark.nvim'
 " -- Etc
 " I can always reinstall this if I ever find the use for it
 " Plug 'mattn/emmet-vim', {'for': ['js', 'markdown']}
@@ -43,16 +44,21 @@ Plug 'nvim-lua/plenary.nvim', {'commit': '1c31adb35fcebe921f65e5c6ff6d5481fa5fa5
 Plug 'nvim-lualine/lualine.nvim', {'commit': '1ae4f0aa74f0b34222c5ef3281b34602a76b2b00'}
 " Telescope
 " This commit is before they migrated to neovim 0.5.1
-Plug 'nvim-telescope/telescope.nvim' ", {'commit': '0caec3d6e4d3c3c71339eb18a9aae7ed0f24badc'}
+" Plug 'nvim-telescope/telescope.nvim' ", {'commit': '4449f709c36503e65e40d9e61bf742ef861c7269'}
+" Telescope finally has a stable version
+Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.0'}
+Plug 'fannheyward/telescope-coc.nvim'
 Plug 'ahmedkhalf/project.nvim'
 " I don't understand what this plugin does
 " Plug 'nvim-telescope/telescope-fzy-nateeive.nvim'
 Plug 'nvim-telescope/telescope-media-files.nvim'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
 
 Plug 'p00f/nvim-ts-rainbow', {'commit': '54ee09f540935c604c9a3d4aed83b7f5314f2caa'}
 " I have coc-outline, remove this plugin?
-Plug 'simrat39/symbols-outline.nvim', {'commit': 'dcab987e431266c4ec9e2e0e81c1e62929c0bd44', 'on':[]}
-Plug 'romgrk/barbar.nvim', {'commit': '6e638309efcad2f308eb9c5eaccf6f62b794bbab'}
+" Plug 'simrat39/symbols-outline.nvim', {'on':[]}
+" Plug 'romgrk/barbar.nvim', {'commit': '6e638309efcad2f308eb9c5eaccf6f62b794bbab'}
+Plug 'romgrk/barbar.nvim', {'tag': 'release/1.0.0'}
 Plug 'airblade/vim-rooter'
 Plug 'glepnir/dashboard-nvim'
 Plug 'antoinemadec/FixCursorHold.nvim'
