@@ -15,6 +15,7 @@
   "diagnostic.virtualText": true,
   "diagnostic.enable": true,
   "suggest.enablePreview": true,
+  "suggest.noselect": true,
   "suggest.detailField": "preview",
   "suggest.floatEnable": true,
   "suggest.minTriggerInputLength": 2,

@@ -113,3 +113,10 @@ nnoremap <silent> <leader>dq :lua require'dap'.close()<cr>
 " Looks like nvim-tree disables netrw, which needs to be enabled to have gx
 " work. Remapped it so it works
 nnoremap <silent> gx :execute '!xdg-open ' . shellescape(expand('<cfile>'), 1)<CR>
+
+" support <c-j> and <c-k>
+inoremap <silent><expr> <C-j>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
