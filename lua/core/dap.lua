@@ -20,6 +20,7 @@ local cfg = {
     },
   }
 
+-- TODO: fix this. Something is wrong. When I require this, this breaks
 local dap = require("dap")
 
 -- See other configs or defaults I can override
