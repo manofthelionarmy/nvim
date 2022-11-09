@@ -16,7 +16,7 @@ function! SetColorScheme(mycolorscheme)
   endif
 endfunction
 
-let mycolorscheme = "dracula"
+let mycolorscheme = "tokyonight"
 call SetColorScheme(mycolorscheme)
 
 " Transparent background
