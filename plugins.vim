@@ -11,7 +11,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sensible'
 " AutoCompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale', {'tag': 'v3.2.0'}
 " Go 
 Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod'], 'tag': 'v1.25'}
 
