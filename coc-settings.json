@@ -69,5 +69,8 @@
   },
   "java.format.enabled": true,
   "java.format.comments.enabled": true,
-  "java.format.onType.enabled": true
+  "java.format.onType.enabled": true,
+  "snippets.extends": {
+    "html": ["jet"]
+  }
 }

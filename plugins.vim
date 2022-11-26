@@ -24,7 +24,7 @@ Plug 'Mofiqul/dracula.nvim', {'branch': 'main'}
 Plug 'navarasu/onedark.nvim'
 " -- Etc
 " I can always reinstall this if I ever find the use for it
-" Plug 'mattn/emmet-vim', {'for': ['js', 'markdown']}
+" Plug 'mattn/emmet-vim', {'for': ['html']}
 " Find another one for auto pairing?
 Plug 'jiangmiao/auto-pairs'
 
@@ -71,4 +71,5 @@ Plug 'folke/which-key.nvim'
 " Look at nvim-dap for example configs and  'Pocco81/DAPInstall.nvim' too
 Plug 'mfussenegger/nvim-dap', {'for': ['javascript']}
 Plug 'rcarriga/nvim-dap-ui', {'for': ['javascript']}
+Plug 'honza/vim-snippets', {'for': ['html']}
 call plug#end()

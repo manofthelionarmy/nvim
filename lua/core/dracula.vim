@@ -5,8 +5,8 @@ augroup MyColors
 	autocmd ColorScheme * hi LineNr guifg=#5081c0 
         \ | hi Special gui=NONE
         \ | hi Function guifg=#50fa7b gui=NONE "gui=bold for tokyo
-        \ | hi CursorLineNR guifg=#FFba00
         \ | hi CursorLine guibg=#292e42
+        \ | hi CursorLineNR guifg=#FFba00
         \ | hi Comment guifg=#5081c0 gui=italic,bold
         \ | hi ErrorMsg gui=undercurl
         \ | hi WarningMsg gui=undercurl
@@ -17,8 +17,7 @@ augroup MyColors
         \ | hi TSTypeBuiltin gui=NONE " set this for dracula
         \ | hi TSKeyword gui=NONE | hi Keyword gui=NONE "gui=bold for tokyo
         \ | hi Normal guibg=NONE ctermbg=NONE
-        \ | hi Visual guifg=black guibg=#F1FA8C " set this for dracula,
-        " yellow visual selection
+        \ | hi Visual guifg=black guibg=#F1FA8C " set this for dracula, yellow visual selection
 augroup END
 
 augroup MyFloat

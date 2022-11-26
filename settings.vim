@@ -115,6 +115,7 @@ let g:ale_java_checkstyle_config="/home/armando/.config/checkstyle/google_checks
 " Looks like ale fixers fixes this if I include goimports
 " autocmd! BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 autocmd! BufEnter *.hbs :set ft=html
+autocmd! BufEnter *.jet :set ft=html
 
 " CocDiagnostics filetype is qf and I want to close it
 autocmd! FileType qf nnoremap <silent> <buffer> <Esc> :q<CR>
