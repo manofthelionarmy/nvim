@@ -1,3 +1,5 @@
-vim.g.symbols_outline = {
-  width = 40
-}
+require("symbols-outline").setup(
+  {
+    width = 55
+  }
+)

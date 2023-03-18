@@ -19,7 +19,7 @@ local scrollbar = {
   left_padding = 0,
   right_padding = 0,
   color = { fg = "#ECBE7B", bg = "#202328" },
-  condition = nil,
+  cond = nil,
 }
   -- check_git_workspace = function()
   --   local filepath = vim.fn.expand "%:p:h"
@@ -63,7 +63,7 @@ local diff = {
     removed = { fg = colors.red },
   },
   color = {},
-  condition = conditions.hide_in_width,
+  cond = conditions.hide_in_width,
 }
 
 local filename = {
@@ -71,7 +71,17 @@ local filename = {
   file_status = true,  -- displays file status (readonly status, modified status)
   path = 0,            -- 0 = just filename, 1 = relative path, 2 = absolute path
   shorting_target = 40, -- Shortens path to leave 40 space in the window
-  condition = conditions.hide_in_width,
+  -- cond = conditions.hide_in_width,
+  fmt = function(str)
+    if vim.fn.winwidth(0) <= 50 then
+      return ' '
+    end
+    local max_length = 15
+    if str:len() > 15 then
+      return '...'..str:sub(max_length/2)
+    end
+    return str
+  end
 }
 
 local treesitter = {
@@ -81,31 +91,54 @@ local treesitter = {
     end
     return ""
   end,
+  padding = {left = 1, right = 0},
   color = { fg = "#98be65" },
-  condition = conditions.hide_in_width,
+  cond = conditions.hide_in_width,
 }
 
 local branch = {
   'branch',
   -- icon = " ",
-  icon = " ",
+  icon = {" ", color={gui="bold,italic"}},
   -- color = { gui = "italic" },
-  condition = conditions.hide_in_width
+  cond = conditions.hide_in_width,
+  shorting_target = 10, -- Shortens path to leave 40 space in the window
+  padding = {left = 1, right = 1},
+  fmt = function(str)
+    local max_length = 15
+    if str:len() > max_length then
+      return str:sub(1, max_length)..'...'
+    end
+    return str
+  end
+}
+
+local mode = {
+  'mode',
+  color = { gui="bold,italic" },
+  separator = { right = '' },
+  fmt = function(str) 
+    return str:sub(1,1)
+  end
 }
 
 local filetype = {
   'filetype',
-  condition = conditions.hide_in_width
+  cond = conditions.hide_in_width
 }
 
 local fileformat = {
   'fileformat',
-  condition = conditions.hide_in_width
+  cond = conditions.hide_in_width,
+  color = {fg=colors.cyan},
+  fmt = function()
+    return ''
+  end
 }
 
 local progress = {
   'progress',
-  condition = conditions.hide_in_width
+  cond = conditions.hide_in_width
 }
 
 local diagnostics = {
@@ -113,7 +146,7 @@ local diagnostics = {
   -- sources={'coc'},
   -- sources={'coc', 'ale'},
   sources={'ale'},
-  condition = conditions.hide_in_width,
+  cond = conditions.hide_in_width,
   -- symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '},
 }
 
@@ -132,7 +165,7 @@ local cfg = {
     always_divide_middle = true,
   },
   sections = {
-    lualine_a = {'mode'},
+    lualine_a = {mode},
     lualine_b = {branch,filename },
     lualine_c = {diff},
     lualine_x = {diagnostics, treesitter, fileformat, filetype},

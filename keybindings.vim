@@ -43,6 +43,7 @@ nnoremap <silent> <leader>tl :lua require('modules/searchdir').live_grep()<CR>
 nnoremap <silent> <leader>tf :lua require('modules/searchdir').find_files()<CR>
 nnoremap <silent> <leader>tt :Telescope find_files<CR>
 nnoremap <silent> <Space>td :lua require('telescope.builtin').find_files({ cwd = vim.fn.expand('%:p:h') })<CR>
+nnoremap <silent> <Space>fb :Telescope file_browser<CR>
 
 " Commentary key bindings
 nnoremap <silent> <leader>/ :Commentary<CR>
@@ -97,10 +98,12 @@ nnoremap <silent> <leader>gs :GitGutterStageHunk<CR>
 " DAP
 nnoremap <silent> <leader>dt :lua require'dap'.toggle_breakpoint()<cr>
 nnoremap <silent> <leader>db :lua require'dap'.step_back()<cr>
-nnoremap <silent> <leader>dc :lua require'dap'.continue()<cr>
-nnoremap <silent> <leader>dC :lua require'dap'.run_to_cursor()<cr>
+" nnoremap <silent> <leader>dc :lua require'dap'.continue()<cr>
+nnoremap <silent> <leader>dO :lua require'dapui'.open()<cr>
+" nnoremap <silent> <leader>dC :lua require'dap'.run_to_cursor()<cr>
+nnoremap <silent> <leader>dC :lua require'dapui'.close()<cr>
 nnoremap <silent> <leader>dd :lua require'dap'.disconnect()<cr>
-nnoremap <silent> <leader>dg :lua require'dap'.session()<<cr>
+nnoremap <silent> <leader>dg :lua require'dap'.session()<cr>
 nnoremap <silent> <leader>di :lua require'dap'.step_into()<cr>
 nnoremap <silent> <leader>do :lua require'dap'.step_over()<cr>
 nnoremap <silent> <leader>du :lua require'dap'.step_out()<cr>
@@ -115,8 +118,5 @@ nnoremap <silent> <leader>dq :lua require'dap'.close()<cr>
 nnoremap <silent> gx :execute '!xdg-open ' . shellescape(expand('<cfile>'), 1)<CR>
 
 " support <c-j> and <c-k>
-inoremap <silent><expr> <C-j>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+inoremap <silent><expr> <C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-j>"
+inoremap <silent><expr> <C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"

@@ -12,7 +12,8 @@ let g:coc_global_extensions = [
       \ 'coc-java',
       \ 'coc-vimlsp',
       \ 'coc-sql',
-      \ 'coc-docker'
+      \ 'coc-docker',
+      \ 'coc-rust-analyzer',
       \ ]
 
 " May need for vim (not neovim) since coc.nvim calculate byte offset by count
@@ -171,6 +172,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " Import so coc auto imports feature can work for go
-autocmd BufWritePre <silent> *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+" autocmd BufWritePre <silent> *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
 let g:coc_borderchars = ['─', '│', '─', '│', '╭', '╮', '╯', '╰']

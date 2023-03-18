@@ -23,12 +23,24 @@ require'nvim-web-devicons'.set_icon({
    cterm_color = "65",
    name = "Html"
   },
-  js = {
-    icon = "",
-    color = js_color,
-    cterm_color = 185,
-    name = "Js"
+  gohtml = {
+   icon = "",
+   color = color,
+   cterm_color = "65",
+   name = "Html"
   },
+  tmpl = {
+   icon = "",
+   color = color,
+   cterm_color = "65",
+   name = "Html"
+  },
+  -- js = {
+  --   icon = "",
+  --   color = js_color,
+  --   cterm_color = 185,
+  --   name = "Js"
+  -- },
   [".gitignore"] = {
     icon = git_icon,
     color = color,
@@ -40,6 +52,12 @@ require'nvim-web-devicons'.set_icon({
     color = "#519aba",
     cterm_color = 67,
     name = "Css"
+  },
+  [''] = {
+    icon = "",
+    color = "#519aba",
+    cterm_color = 67,
+    name = ""
   }
 })
 

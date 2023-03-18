@@ -8,6 +8,8 @@
     "url": "globPattern",
     "Kubernetes": "globPattern"
   },
+  "list.source.outline.defaultArgs": [],
+  "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer",
   "notification.disabledProgressSources": ["*"],
   "diagnostic.displayByAle": true,
   "coc.preferences.bracketEnterImprove": true,
@@ -60,7 +62,7 @@
   },
   "suggest.floatConfig": {
     "border": true,
-    "winblend": 10
+    "winblend": 10,
   },
   "signature.floatConfig": {
     "border": true,
@@ -71,6 +73,9 @@
   "java.format.comments.enabled": true,
   "java.format.onType.enabled": true,
   "snippets.extends": {
-    "html": ["jet"]
-  }
+    "jet": ["html"],
+    "tmpl": ["html"],
+    "gohtmltmpl": ["html"]
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }

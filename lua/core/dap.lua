@@ -24,7 +24,7 @@ local cfg = {
 local dap = require("dap")
 
 -- See other configs or defaults I can override
-dap.defaults.fallback.terminal_win_cmd = "tabnew"
+-- dap.defaults.fallback.terminal_win_cmd = "tabnew"
 
 vim.fn.sign_define("DapBreakpoint", cfg.breakpoint)
 vim.fn.sign_define("DapBreakpointRejected", cfg.breakpoint_rejected)
@@ -37,6 +37,8 @@ dap.set_log_level('ERROR')
 -- Manually install debugging packages too.
 -- this is where I store my debug adapaters... I wonder if I should point to the same ones in vimspector
 local debug_adapters_pth = os.getenv('HOME') .. '/.config/dap_adapters/'
+
+-- TODO: set up jest, set up golang tests
 
 dap.adapters.firefox = {
   type = 'executable',
@@ -108,7 +110,7 @@ local debug_with_node_attach = {
 -- }
 
 dap.configurations.javascript = {
-  debug_with_firefox,
+  -- debug_with_firefox,
   debug_with_node_launch,
   debug_with_node_attach,
 }

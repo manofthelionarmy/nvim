@@ -13,10 +13,16 @@ function! SetColorScheme(mycolorscheme)
   elseif a:mycolorscheme == "tokyonight"
     source ~/.config/nvim/lua/core/tokyonight.vim 
     colorscheme tokyonight
+  elseif a:mycolorscheme == "catppuccin"
+    source ~/.config/nvim/lua/core/catpuccin.vim 
+    colorscheme catppuccin
+  elseif a:mycolorscheme == "everforest"
+    source ~/.config/nvim/lua/core/everforest.vim 
+    colorscheme everforest
   endif
 endfunction
 
-let mycolorscheme = "tokyonight"
+let mycolorscheme = "catppuccin"
 call SetColorScheme(mycolorscheme)
 
 " Transparent background
@@ -39,8 +45,8 @@ set smartindent
 set noscrollbind
 set nocursorbind
 set noswapfile
-set scrolloff=8
-set sidescrolloff=8
+" set scrolloff=8
+" set sidescrolloff=8
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -66,6 +72,9 @@ let g:go_echo_go_info = 0
 let g:go_imports_autosave = 0
 let g:go_fmt_autosave = 0
 let g:go_doc_keywordprg_enabled = 0
+
+" Need this to debug 
+let g:go_debug_breakpoint_sign_text = ''
 
 "Ale
 let g:ale_lint_on_text_changed=0
@@ -98,6 +107,7 @@ let g:ale_linters={
       \ 'javascript': ['prettier', 'eslint'],
       \ 'javascriptreact': ['prettier', 'eslint'],
       \ 'go': ['gopls', 'revive', 'gofmt', 'golint'],
+      \ 'rust': ['analyzer']
       \}
 let g:ale_go_golangci_lint_executable = 'golangci-lint'
 let g:ale_go_golangci_lint_options = '' " don't use the default
@@ -108,7 +118,9 @@ let g:ale_fixers = {
       \ 'javascript': ['eslint', 'prettier'],
       \ 'javascriptreact': ['eslint', 'prettier'],
       \ 'go': ['gofmt', 'goimports','remove_trailing_lines'],
-      \ 'sql': ['pgformatter']
+      \ 'sql': ['pgformatter'],
+      \ 'rust': ['rustfmt'],
+      \ 'html': ['prettier']
       \}
 let g:ale_java_checkstyle_config="/home/armando/.config/checkstyle/google_checks.xml"
 
@@ -116,6 +128,8 @@ let g:ale_java_checkstyle_config="/home/armando/.config/checkstyle/google_checks
 " autocmd! BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 autocmd! BufEnter *.hbs :set ft=html
 autocmd! BufEnter *.jet :set ft=html
+autocmd! BufEnter *.gohtml :set ft=html
+autocmd! BufEnter *.html.tmpl :set ft=html
 
 " CocDiagnostics filetype is qf and I want to close it
 autocmd! FileType qf nnoremap <silent> <buffer> <Esc> :q<CR>

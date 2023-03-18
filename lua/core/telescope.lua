@@ -65,6 +65,21 @@ telescope.setup{
     coc = {
       theme = 'ivy',
       prefer_locations = true, -- always use Telescope locations to preview definitions/declarations/implementations etc
+    },
+    file_browser = {
+      mappings = {
+        ["i"] = {
+          ["<C-o>"] = require "telescope".extensions.file_browser.actions.change_cwd,
+          ["<CR>"] = require "telescope.actions".select_tab
+        },
+      }
+    },
+    fzf = {
+      fuzzy = true,                    -- false will only do exact matching
+      override_generic_sorter = true,  -- override the generic sorter
+      override_file_sorter = true,     -- override the file sorter
+      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                       -- the default case_mode is "smart_case"
     }
   },
 }
@@ -74,3 +89,4 @@ require'telescope'.load_extension('projects')
 require('telescope').load_extension('media_files')
 require('telescope').load_extension('file_browser')
 require('telescope').load_extension('coc')
+require('telescope').load_extension('fzf')
