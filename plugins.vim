@@ -13,7 +13,7 @@ Plug 'tpope/vim-sensible'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale', {'tag': 'v3.3.0'}
 " Go 
-Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod', 'tmpl', 'gohtml'], 'tag': 'v1.25'}
+Plug 'fatih/vim-go' , {'do': ':GoUpdateBinaries', 'for': ['go', 'go.mod', 'tmpl', 'gohtml'], 'tag': 'v1.28'}
 
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -39,9 +39,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'RRethy/vim-hexokinase', {'for': ['markdown', 'html', 'css'], 'do': 'make hexokinase'}
 " Lua Plugins:
 Plug 'kyazdani42/nvim-web-devicons', {'commit': '8df4988ecf8599fc1f8f387bbf2eae790e4c5ffb'}
-Plug 'kyazdani42/nvim-tree.lua', {'commit': '65b8b19c8bcea36e37474338c7e2d2fea95553d3'}
+Plug 'kyazdani42/nvim-tree.lua', {'commit': 'd1410cb0896a3aad5d84ddc54284774a627c6d63'}
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': '0.5-compat'}  " We recommend updating the parsers on update
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': 'v0.8.5.2'}  " We recommend updating the parsers on update
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'tag': 'v0.8.5.2'}  " We recommend updating the parsers on update
 Plug 'windwp/nvim-ts-autotag', {'for': ['javascript', 'html', 'markdown']}
 Plug 'nvim-lua/plenary.nvim', {'commit': '1c31adb35fcebe921f65e5c6ff6d5481fa5fa5ac'}
 " Plug 'nvim-lualine/lualine.nvim', {'commit': '1ae4f0aa74f0b34222c5ef3281b34602a76b2b00'}

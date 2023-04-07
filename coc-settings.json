@@ -10,7 +10,9 @@
   },
   "list.source.outline.defaultArgs": [],
   "rust-analyzer.server.path": "~/.cargo/bin/rust-analyzer",
-  "notification.disabledProgressSources": ["*"],
+  "notification.disabledProgressSources": [
+    "*"
+  ],
   "diagnostic.displayByAle": true,
   "coc.preferences.bracketEnterImprove": true,
   "diagnostic.checkCurrentLine": true,
@@ -73,9 +75,15 @@
   "java.format.comments.enabled": true,
   "java.format.onType.enabled": true,
   "snippets.extends": {
-    "jet": ["html"],
-    "tmpl": ["html"],
-    "gohtmltmpl": ["html"]
+    "jet": [
+      "html"
+    ],
+    "tmpl": [
+      "html"
+    ],
+    "gohtmltmpl": [
+      "html"
+    ]
   },
   "snippets.ultisnips.pythonPrompt": false
 }

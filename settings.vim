@@ -13,7 +13,7 @@ function! SetColorScheme(mycolorscheme)
   elseif a:mycolorscheme == "tokyonight"
     source ~/.config/nvim/lua/core/tokyonight.vim 
     colorscheme tokyonight
-  elseif a:mycolorscheme == "catppuccin"
+  elseif a:mycolorscheme == "catpuccin"
     source ~/.config/nvim/lua/core/catpuccin.vim 
     colorscheme catppuccin
   elseif a:mycolorscheme == "everforest"
@@ -22,7 +22,7 @@ function! SetColorScheme(mycolorscheme)
   endif
 endfunction
 
-let mycolorscheme = "catppuccin"
+let mycolorscheme = "catpuccin"
 call SetColorScheme(mycolorscheme)
 
 " Transparent background
@@ -99,6 +99,9 @@ let g:ale_list_vertical=1
 let g:ale_sign_info = ''
 let g:ale_fix_on_save=1 "Let ale do the work for autoformatting, not coc
 
+" Vim-Rooter
+let g:rooter_silent_chdir = 1
+
 " Make sure coc-eslint and coc-pretty are uninstalled
 " golangci-lint is fairly aggressive
 " golint is deprecated, it was suggest by golanci-lint to use revive
@@ -142,3 +145,6 @@ augroup END
 
 " Sass completion?
 autocmd FileType scss setl iskeyword+=@-@
+
+" Barbar
+" let g:bufferline_maximum_length = 20
