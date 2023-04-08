@@ -26,7 +26,7 @@ let mycolorscheme = "catpuccin"
 call SetColorScheme(mycolorscheme)
 
 " Transparent background
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 
 " TODO: Set leader key to <Space>
 

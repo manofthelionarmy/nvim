@@ -4,6 +4,7 @@ let g:tokyonight_transparent_sidebar=1
 let g:tokyonight_lualine_bold=1
 let g:tokyonight_transparent=1
 let g:tokyonight_italic_comments=1
+let g:tokyonight_transparent = 1
 " let g:tokyonight_italic_functions = 1    
 let g:tokyonight_terminal_colors=1
 let g:tokyonight_lualine_bold=1
