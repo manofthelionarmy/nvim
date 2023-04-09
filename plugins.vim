@@ -26,7 +26,8 @@ Plug 'sainnhe/everforest', {'tag': 'v0.3.0'}
 Plug 'navarasu/onedark.nvim'
 " -- Etc
 " I can always reinstall this if I ever find the use for it
-Plug 'mattn/emmet-vim', {'for': ['html']}
+" Coc-emmet for the win
+" Plug 'mattn/emmet-vim', {'for': ['html']}
 " Find another one for auto pairing?
 Plug 'jiangmiao/auto-pairs'
 
