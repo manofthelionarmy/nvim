@@ -2,9 +2,13 @@ local status_ok, telescope = pcall(require, 'telescope')
 if not status_ok then
     return
 end
+local action_layout = require("telescope.actions.layout")
 local actions = require("telescope.actions")
 telescope.setup{
   defaults = {
+    preview = {                                                                                                                                                                          
+      hide_on_startup = true -- hide previewer when picker starts
+    },
     prompt_prefix = " ",
     selection_caret = " ",
     entry_prefix = "  ",
@@ -15,7 +19,7 @@ telescope.setup{
     layout_config = {
       width = 0.75,
       prompt_position = "top",
-      preview_cutoff = 120,
+      preview_cutoff = 0,
       horizontal = { mirror = false },
       vertical = { mirror = false },
     },
@@ -46,6 +50,7 @@ telescope.setup{
         ["<C-n>"] = actions.move_selection_next,
         ["<C-p>"] = actions.move_selection_previous,
         ["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
+        ["<C-y>"] = action_layout.toggle_preview,
         -- ["<c-t>"] = trouble.open_with_trouble,
         -- ["<C-i>"] = my_cool_custom_action,
       },

@@ -44,7 +44,8 @@ Plug 'kyazdani42/nvim-tree.lua', {'commit': 'd1410cb0896a3aad5d84ddc54284774a627
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': '0.5-compat'}  " We recommend updating the parsers on update
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'tag': 'v0.8.5.2'}  " We recommend updating the parsers on update
 Plug 'windwp/nvim-ts-autotag', {'for': ['javascript', 'html', 'markdown']}
-Plug 'nvim-lua/plenary.nvim', {'commit': '1c31adb35fcebe921f65e5c6ff6d5481fa5fa5ac'}
+" Plug 'nvim-lua/plenary.nvim', {'commit': '1c31adb35fcebe921f65e5c6ff6d5481fa5fa5ac'}
+Plug 'nvim-lua/plenary.nvim', {'tag': 'v0.1.3'}
 " Plug 'nvim-lualine/lualine.nvim', {'commit': '1ae4f0aa74f0b34222c5ef3281b34602a76b2b00'}
 Plug 'nvim-lualine/lualine.nvim'
 " Telescope

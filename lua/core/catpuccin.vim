@@ -25,7 +25,8 @@ require("catppuccin").setup {
       NvimTreeNormal = {bg = colors.none},
       -- TODO: figure out which color this is
       TelescopeNormal = {bg = colors.base },
-      Normal = {bg="NONE", fg="NONE"}
+      Normal = {bg="NONE", fg="NONE"},
+      ALEVirtualTextError = {fg=colors.maroon}
     }
   end
 }

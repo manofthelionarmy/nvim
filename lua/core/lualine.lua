@@ -73,6 +73,7 @@ local filename = {
   file_status = true,   -- displays file status (readonly status, modified status)
   path = 0,             -- 0 = just filename, 1 = relative path, 2 = absolute path
   shorting_target = 40, -- Shortens path to leave 40 space in the window
+  -- color = {bg = '#000000'},
   cond = conditions.hide_in_width,
   fmt = function(str)
     -- if vim.fn.winwidth(0) <= 50 then
@@ -97,7 +98,6 @@ local treesitter = {
   color = { fg = "#98be65" },
   cond = conditions.hide_in_width,
 }
-
 local branch = {
   'branch',
   -- icon = " ",
@@ -173,7 +173,7 @@ local cfg = {
     theme = 'auto',
     -- component_separators = { left = '', right = ''},
     -- component_separators = { left = ' ', right = ''},
-    component_separators = { left = ' ', right = '' },
+    component_separators = { left = '', right = '' },
     -- section_separators = { left = '', right = ''},
     -- section_separators = { left = '', right = ''},
     section_separators = { left = '', right = '' },

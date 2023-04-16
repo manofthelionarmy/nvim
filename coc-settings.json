@@ -1,8 +1,9 @@
 {
   "go.goplsOptions": {
     "completeUnimported": true,
-    "hoverKind": "SingleLine"
+    "hoverKind": "SingleLine",
   },
+  "codeLens.enable": true,
   "go.goplsPath": "~/go/bin/gopls",
   "yaml.schemas": {
     "url": "globPattern",
@@ -16,7 +17,7 @@
   "diagnostic.displayByAle": true,
   "coc.preferences.bracketEnterImprove": true,
   "diagnostic.checkCurrentLine": true,
-  "diagnostic.virtualText": true,
+  "diagnostic.virtualText": false,
   "diagnostic.enable": true,
   "suggest.enablePreselect": false,
   "suggest.enableFloat": true,
@@ -60,16 +61,19 @@
     "border": true,
     "title": " 🙈",
     "winblend": 10,
-    "maxHeight": 10
+    "maxHeight": 10,
+    "highlight": "CocFloating"
   },
   "suggest.floatConfig": {
     "border": true,
     "winblend": 10,
+    "highlight": "CocFloating"
   },
   "signature.floatConfig": {
     "border": true,
     "title": " 🙈",
-    "winblend": 10
+    "winblend": 10,
+    "highlight": "CocFloating"
   },
   "java.format.enabled": true,
   "java.format.comments.enabled": true,
