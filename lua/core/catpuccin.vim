@@ -22,11 +22,16 @@ require("catppuccin").setup {
       ALEWarningSign = {fg = colors.yellow},
       AleWarningLine = {fg = colors.peach, style = {"bold", "undercurl"}},
       AleVirtualTextWarning = {fg = colors.peach, style = {"bold", "undercurl"}},
-      NvimTreeNormal = {bg = colors.none},
       -- TODO: figure out which color this is
-      TelescopeNormal = {bg = colors.base },
+      NvimTreeNormal = { bg = colors.none },
+      TelescopeNormal = { bg = colors.base },
+      TelescopeBorder = { bg = colors.base },
+      TelescopeResultsBorder = { bg = colors.base },
+      TelescopePromptBorder = { bg = colors.base },
       Normal = {bg="NONE", fg="NONE"},
-      ALEVirtualTextError = {fg=colors.maroon}
+      ALEVirtualTextError = {fg=colors.maroon, bg=colors.base},
+      ALEVirtualTextInfo = {fg='#94e2d5', bg=colors.base},
+      ALEInfoSign = {fg='#94e2d5'}
     }
   end
 }

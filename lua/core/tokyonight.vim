@@ -24,6 +24,8 @@ augroup MyColors
         \ | hi Todo gui=bold
         \ | hi TSKeyword gui=NONE | hi Keyword gui=NONE "gui=bold for tokyo
         \ | hi Function gui=NONE 
+        \ | hi ALEVirtualTextInfo guifg=#94e2d5 "guibg=<make this a dark color>
+        \ | hi ALEInfoSign guifg=#94e2d5
       " \ | hi Visual guifg=black guibg=#F1FA8C " set this for dracula
 augroup END
 
@@ -61,7 +63,12 @@ lua << EOF
     --- function will be called with a Highlights and ColorScheme table
     ---@param highlights Highlights
     ---@param colors ColorScheme
-    on_highlights = function(highlights, colors) end,
+    on_highlights = function(highlights, colors)
+      highlights.ALEVirtualTextError = {fg=colors.maroon}
+      highlights.ALEVirtualTextInfo = {fg='#94e2d5', bg=colors.base}
+      highlights.ALEInfoSign = {fg='#94e2d5'}
+      highlights.ALEInfo = {fg='#94e2d5'}
+    end,
   })
 EOF
 

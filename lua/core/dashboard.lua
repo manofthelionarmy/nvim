@@ -4,7 +4,7 @@ local custom_section = {
   {
     -- desc = { "  Find File          " },
     desc = "  Find File          ",
-    action = "Telescope find_files",
+    action = "Telescope find_files hidden=true",
     icon = ""
   },
   {

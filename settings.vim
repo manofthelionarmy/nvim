@@ -82,6 +82,7 @@ let g:ale_lint_on_insert_leave=1
 let g:ale_lint_on_enter=1
 let g:ale_lint_on_save=1
 let g:ale_set_highlights=0
+let g:ale_virtualtext_prefix = "■ "
 
 " https://freshman.tech/vim-quickfix-and-location-list/
 " This will update the quickfix list, both ale and coc-diagnostics share this

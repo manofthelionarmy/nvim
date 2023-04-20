@@ -55,11 +55,11 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.1'}
 Plug 'nvim-telescope/telescope-symbols.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
-Plug 'fannheyward/telescope-coc.nvim'
+" Plug 'fannheyward/telescope-coc.nvim'
 Plug 'ahmedkhalf/project.nvim'
 " I don't understand what this plugin does
 " Plug 'nvim-telescope/telescope-fzy-nateeive.nvim'
-Plug 'nvim-telescope/telescope-media-files.nvim'
+" Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
 
 " Plug 'p00f/nvim-ts-rainbow', {'commit': '54ee09f540935c604c9a3d4aed83b7f5314f2caa'}

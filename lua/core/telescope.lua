@@ -61,16 +61,16 @@ telescope.setup{
     --   override_generic_sorter = false,
     --   override_file_sorter = true,
     -- },
-    media_files = {
-      -- filetypes whitelist
-      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-      filetypes = {"png", "webp", "jpg", "jpeg"},
-      find_cmd = "rg" -- find command (defaults to `fd`)
-    },
-    coc = {
-      theme = 'ivy',
-      prefer_locations = true, -- always use Telescope locations to preview definitions/declarations/implementations etc
-    },
+    -- media_files = {
+    --   -- filetypes whitelist
+    --   -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+    --   filetypes = {"png", "webp", "jpg", "jpeg"},
+    --   find_cmd = "rg" -- find command (defaults to `fd`)
+    -- },
+    -- coc = {
+    --   theme = 'ivy',
+    --   prefer_locations = true, -- always use Telescope locations to preview definitions/declarations/implementations etc
+    -- },
     file_browser = {
       mappings = {
         ["i"] = {
@@ -91,7 +91,7 @@ telescope.setup{
 require'telescope'.load_extension('projects')
 -- Make sure to load this if I want to use the extension
 -- require('telescope').load_extension('fzy_native')
-require('telescope').load_extension('media_files')
+-- require('telescope').load_extension('media_files')
 require('telescope').load_extension('file_browser')
-require('telescope').load_extension('coc')
+-- require('telescope').load_extension('coc')
 require('telescope').load_extension('fzf')
