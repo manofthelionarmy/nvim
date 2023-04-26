@@ -69,7 +69,7 @@ Plug 'HiPhish/nvim-ts-rainbow2', {'tag': 'v2.0.0' }
 " I have coc-outline, remove this plugin?
 " Plug 'simrat39/symbols-outline.nvim'
 " Plug 'romgrk/barbar.nvim', {'commit': '6e638309efcad2f308eb9c5eaccf6f62b794bbab'}
-Plug 'romgrk/barbar.nvim', {'tag': 'release/1.5.0'}
+Plug 'romgrk/barbar.nvim', {'tag': 'v1.5.0'}
 Plug 'airblade/vim-rooter'
 " Recent master has changed the way we configure this again
 Plug 'glepnir/dashboard-nvim', {'commit': '115b9f9cec10e31aff39c077bf5a4881bc840916'}
