@@ -17,7 +17,7 @@ require("catppuccin").setup {
       Comment = { fg = colors.surface2, style = {"bold", "italic"} },
       ["@constant.builtin"] = { fg = colors.peach, style = {} },
       ["@comment"] = { fg = colors.surface2, style = { "bold", "italic" } },
-      ["@property"] = { fg = colors.blue },
+      --["@property"] = { fg = colors.blue },
       CursorLineNr = { style = {"bold"} },
       ALEWarningSign = {fg = colors.yellow},
       AleWarningLine = {fg = colors.peach, style = {"bold", "undercurl"}},

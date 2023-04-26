@@ -163,7 +163,7 @@ local diagnostics = {
   cond = function()
     return vim.fn.winwidth(0) >= 50
   end,
-  -- symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '},
+  symbols = {info = ' ', hint = ' '},
 }
 
 -- Default provided at lualine repo: https://github.com/nvim-lualine/lualine.nvim#default-config

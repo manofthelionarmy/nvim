@@ -122,3 +122,5 @@ nnoremap <silent> gx :execute '!xdg-open ' . shellescape(expand('<cfile>'), 1)<C
 " support <c-j> and <c-k>
 inoremap <silent><expr> <C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-j>"
 inoremap <silent><expr> <C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
+
+nnoremap <silent> <space>A :copen<CR>

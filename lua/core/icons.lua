@@ -62,7 +62,13 @@ require'nvim-web-devicons'.set_icon({
     cterm_color = 67,
     name = ""
   },
-  ['tmux.conf.local'] = {
+  ['local'] = {
+    icon = "",
+    color = "#519aba",
+    cterm_color = 67,
+    name = ""
+  },
+  ['tmux'] = {
     icon = "",
     color = "#519aba",
     cterm_color = 67,
