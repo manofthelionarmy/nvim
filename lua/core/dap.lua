@@ -108,6 +108,88 @@ local debug_with_node_attach = {
 --   console = 'integratedTerminal',
 --   processId = require'dap.utils'.pick_process,
 -- }
+dap.adapters.delve = {
+  type = 'server',
+  -- port = '${port}',
+  port = '8181',
+  host = '127.0.0.1',
+  executable = nil,
+  -- executable = {
+  --   command = 'dlv',
+  --   args = {'dap', '-l', '127.0.0.1:${port}'},
+  -- }
+}
+
+
+require('dap-go').setup {
+  -- Additional dap configurations can be added.
+  -- dap_configurations accepts a list of tables where each entry
+  -- represents a dap configuration. For more details do:
+  -- :help dap-configuration
+  dap_configurations = {
+    {
+      -- Must be "go" or it will be ignored by the plugin
+      type = "go_headless",
+      name = "Attach remote",
+      mode = "remote",
+      request = "attach",
+      connect = {
+        host = "127.0.0.1",
+        port = "8181"
+      },
+      console = 'internalConsole'
+    },
+  },
+  -- delve configurations
+  delve = {
+    -- time to wait for delve to initialize the debug session.
+    -- default to 20 seconds
+    -- initialize_timeout_sec = 20,
+    -- a string that defines the port to start delve debugger.
+    -- default to string "${port}" which instructs nvim-dap
+    -- to start the process in a random available port
+    port = "8181" -- I don't want this to start it, I want to attach to it
+  },
+}
+
+-- The config from this dap-go was creating an executable, saying to create a server
+-- If we don't specify it, we can connect to it without the error saying the port is already in use.
+dap.adapters.go = {
+    type = "server",
+    port = '8181',
+    -- executable = {
+    --   command = "dlv",
+    --   args = { "dap", "-l", "127.0.0.1:" .. config.delve.port },
+    -- },
+    -- options = {
+    --   initialize_timeout_sec = config.delve.initialize_timeout_sec,
+    -- },
+  }
+
+-- -- https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md
+-- dap.configurations.go = {
+--   {
+--     type = "delve",
+--     name = "Debug",
+--     request = "launch",
+--     program = "${file}"
+--   },
+--   {
+--     type = "delve",
+--     name = "Debug test", -- configuration for debugging test files
+--     request = "launch",
+--     mode = "test",
+--     program = "${file}"
+--   },
+--   -- works with go.mod packages and sub packages 
+--   {
+--     type = "delve",
+--     name = "Debug test (go.mod)",
+--     request = "launch",
+--     mode = "test",
+--     program = "./${relativeFileDirname}"
+--   } 
+-- }
 
 dap.configurations.javascript = {
   -- debug_with_firefox,

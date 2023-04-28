@@ -79,8 +79,12 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 " TODO: slowly migrate over keybindings from keymappings.vim
 Plug 'folke/which-key.nvim' 
 " Look at nvim-dap for example configs and  'Pocco81/DAPInstall.nvim' too
-Plug 'mfussenegger/nvim-dap'
-Plug 'rcarriga/nvim-dap-ui'
+Plug 'mfussenegger/nvim-dap', {'tag': '0.6.0'}
+" Plug 'rcarriga/nvim-dap-ui', {'tag': 'v3.8.0'}
+Plug 'rcarriga/nvim-dap-ui', {'commit': '286f682f366fbc652b38dff893569374e9433dd3'}
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'honza/vim-snippets', {'for': ['html']}
+" Plug 'leoluz/nvim-dap-go'
+" Plug 'manofthelionarmy/nvim-dap-go', {'branch': 'experiment/go-headless-adapter'}
+Plug 'manofthelionarmy/nvim-dap-go', {'dir': '~/opensource/nvim-dap-go'}
 call plug#end()

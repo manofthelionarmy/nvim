@@ -72,6 +72,11 @@ let g:go_echo_go_info = 0
 let g:go_imports_autosave = 0
 let g:go_fmt_autosave = 0
 let g:go_doc_keywordprg_enabled = 0
+" Enable this when we have issues in debugging
+" let g:go_debug=['shell-commands']
+let g:go_debug_address='localhost:8181'
+" let g:gitgutter_sign_priority
+let g:gitgutter_sign_allow_clobber=1
 
 " Need this to debug 
 let g:go_debug_breakpoint_sign_text = ''
