@@ -87,4 +87,5 @@ Plug 'honza/vim-snippets', {'for': ['html']}
 " Plug 'leoluz/nvim-dap-go'
 " Plug 'manofthelionarmy/nvim-dap-go', {'branch': 'experiment/go-headless-adapter'}
 Plug 'manofthelionarmy/nvim-dap-go', {'dir': '~/opensource/nvim-dap-go'}
+Plug 'stevearc/dressing.nvim'
 call plug#end()

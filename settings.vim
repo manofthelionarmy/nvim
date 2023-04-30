@@ -81,6 +81,11 @@ let g:gitgutter_sign_allow_clobber=1
 " Need this to debug 
 let g:go_debug_breakpoint_sign_text = ''
 
+let g:go_debug_windows = {
+      \ 'vars':       'leftabove 40vnew',
+      \ 'stack':      'leftabove 10new',
+\ }
+
 "Ale
 let g:ale_lint_on_text_changed=0
 let g:ale_lint_on_insert_leave=1
