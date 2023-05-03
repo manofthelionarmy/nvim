@@ -134,7 +134,7 @@ require('dap-go').setup {
       mode = "remote",
       request = "attach",
       connect = {
-        host = "127.0.0.1",
+        host = "localhost",
         port = "8181"
       },
     },
