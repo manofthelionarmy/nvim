@@ -5,15 +5,15 @@ local custom_section = {
     -- desc = { "  Find File          " },
     desc = "  Find File          ",
     action = "Telescope find_files hidden=true",
-    icon = ""
+    icon = "󰱼"
   },
   {
     desc = "  New File           ",
     action = ":ene!",
-    icon = ""
+    icon = "󰈔"
   },
   {
-    desc = "  Recent Projects    ",
+    desc = "󰄉  Recent Projects    ",
     action = "Telescope projects",
   },
   {
@@ -21,7 +21,7 @@ local custom_section = {
     action = "Telescope oldfiles",
   },
   {
-    desc = "  Find Word          ",
+    desc = "󰊄  Find Word          ",
     action = "Telescope live_grep",
   },
   {

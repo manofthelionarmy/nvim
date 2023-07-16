@@ -15,7 +15,7 @@ require("catppuccin").setup {
   custom_highlights = function(colors)
     return {
       Comment = { fg = colors.surface2, style = {"bold", "italic"} },
-      ["@constant.builtin"] = { fg = colors.peach, style = {} },
+      --["@constant.builtin"] = { fg = colors.peach, style = {} },
       ["@comment"] = { fg = colors.surface2, style = { "bold", "italic" } },
       --["@property"] = { fg = colors.blue },
       CursorLineNr = { style = {"bold"} },

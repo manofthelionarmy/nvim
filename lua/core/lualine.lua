@@ -56,7 +56,7 @@ local colors = {
 local diff = {
   'diff',
   source = 'coc',
-  symbols = { added = " ", modified = "柳", removed = " " },
+  symbols = { added = " ", modified = " ", removed = " " },
   diff_color = {
     added = { fg = colors.green },
     modified = { fg = colors.yellow },
@@ -163,7 +163,7 @@ local diagnostics = {
   cond = function()
     return vim.fn.winwidth(0) >= 50
   end,
-  symbols = {info = ' ', hint = ' '},
+  symbols = {info = ' ', hint = '󰌵 ', warn = ' '},
 }
 
 -- Default provided at lualine repo: https://github.com/nvim-lualine/lualine.nvim#default-config

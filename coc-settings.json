@@ -89,5 +89,6 @@
       "html"
     ]
   },
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "coc.preferences.extensionUpdateCheck": "never"
 }
