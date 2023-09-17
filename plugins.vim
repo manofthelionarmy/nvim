@@ -20,7 +20,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " Color schemes
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'Mofiqul/dracula.nvim', {'branch': 'main'}
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'catppuccin/nvim', { 'as': 'catppuccin', 'tag': 'v1.4.0'  }
 Plug 'sainnhe/everforest', {'tag': 'v0.3.0'}
 " Plug 'ellisonleao/gruvbox.nvim' " double check, the color scheme is too bright
 Plug 'navarasu/onedark.nvim'
@@ -42,7 +42,7 @@ Plug 'RRethy/vim-hexokinase', {'for': ['markdown', 'html', 'css'], 'do': 'make h
 Plug 'kyazdani42/nvim-web-devicons'", {'commit': '8df4988ecf8599fc1f8f387bbf2eae790e4c5ffb'}
 Plug 'kyazdani42/nvim-tree.lua', {'commit': 'd1410cb0896a3aad5d84ddc54284774a627c6d63'}
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': '0.5-compat'}  " We recommend updating the parsers on update
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'tag': 'v0.8.5.2'}  " We recommend updating the parsers on update
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'tag': 'v0.9.1'}  " We recommend updating the parsers on update
 Plug 'windwp/nvim-ts-autotag', {'for': ['javascript', 'html', 'markdown']}
 " Plug 'nvim-lua/plenary.nvim', {'commit': '1c31adb35fcebe921f65e5c6ff6d5481fa5fa5ac'}
 Plug 'nvim-lua/plenary.nvim', {'tag': 'v0.1.3'}
@@ -52,7 +52,7 @@ Plug 'nvim-lualine/lualine.nvim'
 " This commit is before they migrated to neovim 0.5.1
 " Plug 'nvim-telescope/telescope.nvim' ", {'commit': '4449f709c36503e65e40d9e61bf742ef861c7269'}
 " Telescope finally has a stable version
-Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.1'}
+Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.3'}
 Plug 'nvim-telescope/telescope-symbols.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 " Plug 'fannheyward/telescope-coc.nvim'
@@ -65,14 +65,15 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 " Plug 'p00f/nvim-ts-rainbow', {'commit': '54ee09f540935c604c9a3d4aed83b7f5314f2caa'}
 " No longer maintained, the project has been archived
 " Plug 'p00f/nvim-ts-rainbow', {'commit': 'fad8badcd9baa4deb2cf2a5376ab412a1ba41797'}
-Plug 'HiPhish/nvim-ts-rainbow2', {'tag': 'v2.0.0' }
+Plug 'HiPhish/nvim-ts-rainbow2', {'tag': 'v2.3.0' }
 " I have coc-outline, remove this plugin?
 " Plug 'simrat39/symbols-outline.nvim'
 " Plug 'romgrk/barbar.nvim', {'commit': '6e638309efcad2f308eb9c5eaccf6f62b794bbab'}
 Plug 'romgrk/barbar.nvim', {'tag': 'v1.5.0'}
 Plug 'airblade/vim-rooter'
 " Recent master has changed the way we configure this again
-Plug 'glepnir/dashboard-nvim', {'commit': '115b9f9cec10e31aff39c077bf5a4881bc840916'}
+" Plug 'glepnir/dashboard-nvim', {'commit': '115b9f9cec10e31aff39c077bf5a4881bc840916'}
+Plug 'nvimdev/dashboard-nvim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 " Plug 'liuchengxu/vim-which-key'
 " slow, could be faster if we specify our keybindings whichkey.lua
@@ -88,5 +89,5 @@ Plug 'honza/vim-snippets', {'for': ['html']}
 " Plug 'manofthelionarmy/nvim-dap-go', {'branch': 'experiment/go-headless-adapter'}
 Plug 'manofthelionarmy/nvim-dap-go', {'dir': '~/opensource/nvim-dap-go'}
 Plug 'stevearc/dressing.nvim'
-Plug 'folke/todo-comments.nvim'
+Plug 'folke/todo-comments.nvim', {'tag': 'v1.1.0'}
 call plug#end()

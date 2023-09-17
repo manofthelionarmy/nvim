@@ -1,6 +1,6 @@
 local db = require('dashboard')
 local home_dir = vim.loop.os_homedir()
-local custom_section = {
+local center = {
   {
     -- desc = { "  Find File          " },
     desc = "  Find File          ",
@@ -32,10 +32,9 @@ local custom_section = {
 
 -- vim.g.dashboard_default_executive = 'telescope'
 -- vim.g.dashboard_session_directory = home_dir .. "/.cache/nvim/sessions" 
-db.custom_center = custom_section
 -- TODO: fix this, want to have the exact count
 local plugins_count = vim.fn.len(vim.fn.globpath('~/.config/nvim/plugged', '*', 0, 1))
-db.custom_footer = {'VimPlug loaded ' ..plugins_count.. ' plugins 🔌'}
+local footer = {'VimPlug loaded ' ..plugins_count.. ' plugins 🔌'}
 -- vim.cmd "let packages = len(globpath('~/.config/nvim/plugged', '*', 0, 1))"
 -- vim.api.nvim_exec(
 --   [[
@@ -43,7 +42,7 @@ db.custom_footer = {'VimPlug loaded ' ..plugins_count.. ' plugins 🔌'}
 --   ]],
 --   false
 -- )
-db.custom_header = {
+local header = {
     '                                ▄      ',
     '          ▄▄▄▀▀▀▀█▄▄▄           █▄     ',
     '       ▄█▀▀░░░░░░░░░▀▀█▄▄▄▄▄▄▄  █▀▄    ',
@@ -69,9 +68,12 @@ db.custom_header = {
     " ",
     "     - Jake the Dog, Adventure Time",
 }
--- vim.g.dashboard_preview_file_height = 20
--- vim.g.dashboard_preview_file_width = 40
-
--- vim.g.dashboard_preview_command = 'cat'
--- vim.g.dashboard_preview_pipeline = 'cat'
--- vim.g.dashboard_preview_file = '~/.config/nvim/mudkip.cat'
+local cfg = {
+  theme = 'doom',
+  config = {
+    header = header,
+    center = center,
+    footer = footer,
+  },
+}
+db.setup(cfg)
