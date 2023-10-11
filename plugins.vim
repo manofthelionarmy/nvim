@@ -39,7 +39,7 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'RRethy/vim-hexokinase', {'for': ['markdown', 'html', 'css'], 'do': 'make hexokinase'}
 " Lua Plugins:
-Plug 'kyazdani42/nvim-web-devicons'", {'commit': '8df4988ecf8599fc1f8f387bbf2eae790e4c5ffb'}
+Plug 'kyazdani42/nvim-web-devicons', {'tag': 'nerd-v2-compat'}
 Plug 'kyazdani42/nvim-tree.lua', {'commit': 'd1410cb0896a3aad5d84ddc54284774a627c6d63'}
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': '0.5-compat'}  " We recommend updating the parsers on update
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'tag': 'v0.9.1'}  " We recommend updating the parsers on update

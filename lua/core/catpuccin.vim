@@ -10,6 +10,7 @@ require("catppuccin").setup {
     which_key = true,
     ts_rainbow2 = true,
     coc_nvim = true,
+    dashboard = true,
     -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
   },
   custom_highlights = function(colors)
