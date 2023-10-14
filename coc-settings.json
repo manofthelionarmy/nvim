@@ -31,7 +31,7 @@
   "sql.lintOnChange": false,
   "suggest.completionItemKindLabels": {
     "keyword": "󰌋 ",
-    "variable": " ",
+    "variable": " ",
     "value": " ",
     "operator": " ",
     "constructor": " ",
