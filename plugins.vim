@@ -65,7 +65,8 @@ Plug 'nvim-telescope/telescope-file-browser.nvim'
 " Plug 'p00f/nvim-ts-rainbow', {'commit': '54ee09f540935c604c9a3d4aed83b7f5314f2caa'}
 " No longer maintained, the project has been archived
 " Plug 'p00f/nvim-ts-rainbow', {'commit': 'fad8badcd9baa4deb2cf2a5376ab412a1ba41797'}
-Plug 'HiPhish/nvim-ts-rainbow2', {'tag': 'v2.3.0' }
+Plug 'hiphish/rainbow-delimiters.nvim'
+" Plug 'HiPhish/nvim-ts-rainbow2', {'tag': 'v2.3.0' }
 " I have coc-outline, remove this plugin?
 " Plug 'simrat39/symbols-outline.nvim'
 " Plug 'romgrk/barbar.nvim', {'commit': '6e638309efcad2f308eb9c5eaccf6f62b794bbab'}

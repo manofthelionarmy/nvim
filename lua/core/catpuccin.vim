@@ -8,7 +8,8 @@ require("catppuccin").setup {
     mini = false,
     barbar = true,
     which_key = true,
-    ts_rainbow2 = true,
+    --ts_rainbow2 = true,
+    rainbow_delimiters = true,
     coc_nvim = true,
     dashboard = true,
     -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)

@@ -124,3 +124,7 @@ inoremap <silent><expr> <C-j> coc#pum#visible() ? coc#pum#next(1) : "\<C-j>"
 inoremap <silent><expr> <C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
 
 nnoremap <silent> <space>A :copen<CR>
+
+
+" Show signature while in insertmode
+inoremap <silent> <C-x> <C-r>=CocActionAsync('showSignatureHelp')<CR>
