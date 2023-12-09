@@ -1,4 +1,5 @@
 {
+  "dart.enableSdkFormatter": false,
   "go.goplsOptions": {
     "completeUnimported": true,
     "hoverKind": "SingleLine",
