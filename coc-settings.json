@@ -25,6 +25,7 @@
   "suggest.noselect": false,
   "suggest.detailField": "preview",
   "suggest.minTriggerInputLength": 2,
+  "suggest.labelMaxLength": 50,
   "hover.previewMaxHeight": 10,
   "sql.database": "postgresql",
   "sql.lintOnSave": false,

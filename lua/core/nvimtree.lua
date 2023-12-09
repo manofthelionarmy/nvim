@@ -28,7 +28,7 @@ else
       enable = true, -- neat, it works with nvim-lsp and coc :)
       show_on_dirs = false,
       icons = {
-        hint = "",
+        hint = "󰌵",
         info = "",
         warning = "",
         error = "",

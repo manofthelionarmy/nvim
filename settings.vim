@@ -134,7 +134,8 @@ let g:ale_fixers = {
       \ 'go': ['gofmt', 'goimports','remove_trailing_lines'],
       \ 'sql': ['pgformatter'],
       \ 'rust': ['rustfmt'],
-      \ 'html': ['prettier']
+      \ 'html': ['prettier'],
+      \ 'dart': ['dart-format']
       \}
 let g:ale_java_checkstyle_config="/home/armando/.config/checkstyle/google_checks.xml"
 

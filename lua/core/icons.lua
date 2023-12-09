@@ -62,6 +62,12 @@ require'nvim-web-devicons'.set_icon({
     cterm_color = 67,
     name = ""
   },
+  ['txt'] = {
+    icon = "",
+    color = "#519aba",
+    cterm_color = 67,
+    name = ""
+  },
   ['local'] = {
     icon = "",
     color = "#519aba",

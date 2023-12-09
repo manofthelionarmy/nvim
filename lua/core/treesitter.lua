@@ -1,6 +1,24 @@
 local cfg = {
-  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  ignore_install = {},
+  ensure_installed = {
+    "bash",
+    "c",
+    "javascript",
+    "json",
+    "lua",
+    "python",
+    "typescript",
+    "tsx",
+    "css",
+    "rust",
+    "java",
+    "yaml",
+    "go",
+    "dockerfile",
+    "make",
+    "html"
+    -- sql?
+  }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  ignore_install = {'dart'},
   matchup = {
     enable = false, -- mandatory, false will disable the whole extension
     -- disable = { "c", "ruby" },  -- optional, list of language that will be disabled
