@@ -1,5 +1,13 @@
 {
   "dart.enableSdkFormatter": false,
+  "flutter.workspaceFolder.ignore": [
+      "~/.pub-cache",
+      "~/fvm/versions/stable/packages/flutter"
+  ],
+  "dart.analysisExcludedFolders": [
+    "~/.pub-cache",
+    "~/fvm/versions/stable/"
+  ],
   "go.goplsOptions": {
     "completeUnimported": true,
     "hoverKind": "SingleLine",
@@ -26,8 +34,12 @@
   "suggest.noselect": false,
   "suggest.detailField": "preview",
   "suggest.minTriggerInputLength": 2,
-  "suggest.labelMaxLength": 50,
-  "suggest.triggerCompletionWait": 10,
+  // override some settings specifically for dart
+  "[dart]": {
+    "suggest.triggerCompletionWait": 10,
+    "suggest.minTriggerInputLength": 3,
+    "suggest.timeout": 15000,
+  },
   "hover.previewMaxHeight": 10,
   "sql.database": "postgresql",
   "sql.lintOnSave": false,
@@ -67,6 +79,7 @@
     "maxHeight": 10,
     "highlight": "CocFloating"
   },
+  "suggest.labelMaxLength": 50,
   "suggest.floatConfig": {
     "border": true,
     "winblend": 10,
