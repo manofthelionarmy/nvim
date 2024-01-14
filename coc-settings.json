@@ -1,4 +1,5 @@
 {
+  "dart.showTodos": false,
   "dart.enableSdkFormatter": false,
   "flutter.workspaceFolder.ignore": [
       "~/.pub-cache",
@@ -106,5 +107,7 @@
     ]
   },
   "snippets.ultisnips.pythonPrompt": false,
-  "coc.preferences.extensionUpdateCheck": "never"
+  "coc.preferences.extensionUpdateCheck": "never",
+  "tsserver.log": "verbose",
+  "tsserver.pluginPaths": ["."]
 }

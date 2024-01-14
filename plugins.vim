@@ -92,5 +92,8 @@ Plug 'manofthelionarmy/nvim-dap-go', {'dir': '~/opensource/nvim-dap-go'}
 Plug 'stevearc/dressing.nvim'
 Plug 'folke/todo-comments.nvim', {'tag': 'v1.1.0'}
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'rebelot/kanagawa.nvim'
+Plug 'ggandor/leap.nvim'
+" Plug 'folke/trouble.nvim', {'on': 'TroubleToggle'}
 " Plug 'akinsho/flutter-tools.nvim'
 call plug#end()

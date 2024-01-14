@@ -135,7 +135,7 @@ let g:ale_fixers = {
       \ 'sql': ['pgformatter'],
       \ 'rust': ['rustfmt'],
       \ 'html': ['prettier'],
-      \ 'dart': ['dart-format']
+      \ 'dart': ['trim_whitespace', 'dartfmt']
       \}
 let g:ale_java_checkstyle_config="/home/armando/.config/checkstyle/google_checks.xml"
 
@@ -160,3 +160,5 @@ autocmd FileType scss setl iskeyword+=@-@
 
 " Barbar
 " let g:bufferline_maximum_length = 20
+
+autocmd FileType Trouble nnoremap <silent> <buffer> <Esc> :q<CR>

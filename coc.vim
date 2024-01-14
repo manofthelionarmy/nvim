@@ -8,7 +8,6 @@ let g:coc_global_extensions = [
       \ 'coc-snippets', 
       \ 'coc-html',
       \ 'coc-css',
-      \ 'coc-ccls',
       \ 'coc-java',
       \ 'coc-vimlsp',
       \ 'coc-sql',
@@ -16,7 +15,7 @@ let g:coc_global_extensions = [
       \ 'coc-rust-analyzer',
       \ 'coc-lua',
       \ 'coc-emmet',
-      \ 'coc-flutter'
+      \ 'coc-flutter',
       \ ]
 
 
