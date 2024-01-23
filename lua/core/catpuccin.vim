@@ -1,6 +1,7 @@
 lua << EOF
 require("catppuccin").setup {
   flavour = "frappe", -- latte, frappe, macchiato, mocha
+  transparent_background = true,
   integrations = {
     nvimtree = true,
     telescope = true,
@@ -31,7 +32,7 @@ require("catppuccin").setup {
       TelescopeBorder = { bg = colors.base },
       TelescopeResultsBorder = { bg = colors.base },
       TelescopePromptBorder = { bg = colors.base },
-      Normal = {bg="NONE", fg="NONE"},
+      -- Normal = {bg="NONE", fg="NONE"},
       ALEVirtualTextError = {fg=colors.maroon, bg=colors.base},
       ALEVirtualTextInfo = {fg='#94e2d5', bg=colors.base},
       ALEInfoSign = {fg='#94e2d5'}
