@@ -76,21 +76,21 @@
   "hover.floatConfig": {
     "border": true,
     "title": " 🙈",
-    "winblend": 10,
     "maxHeight": 10,
-    "highlight": "CocFloating"
+    "highlight": "TelescopeNormal",
+    "borderhighlight": "TelescopeBorder",
   },
   "suggest.labelMaxLength": 50,
   "suggest.floatConfig": {
     "border": true,
-    "winblend": 10,
-    "highlight": "CocFloating"
+    "highlight": "TelescopeNormal",
+    "borderhighlight": "TelescopeBorder",
   },
   "signature.floatConfig": {
     "border": true,
     "title": " 🙈",
-    "winblend": 10,
-    "highlight": "CocFloating"
+    "highlight": "TelescopeNormal",
+    "borderhighlight": "TelescopeBorder",
   },
   "java.format.enabled": true,
   "java.format.comments.enabled": true,

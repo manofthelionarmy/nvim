@@ -131,4 +131,4 @@ nnoremap <silent> <space>A :copen<CR>
 inoremap <silent> <C-x> <C-r>=CocActionAsync('showSignatureHelp')<CR>
 
 " Exit terminal mode
-tnoremap <C-a> <C-\><C-n>
+tnoremap <C-q> <C-\><C-n>
