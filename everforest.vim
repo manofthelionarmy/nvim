@@ -1,6 +1,6 @@
 let g:everforest_background = 'medium'
 let g:everforest_better_performance = 1
-let g:everforest_transparent_background = 1
+let g:everforest_transparent_background = 0
 
 augroup MyColors
 	autocmd!

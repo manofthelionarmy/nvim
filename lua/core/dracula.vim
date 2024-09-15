@@ -11,7 +11,6 @@ augroup MyColors
         \ | hi ErrorMsg gui=undercurl
         \ | hi WarningMsg gui=undercurl
         \ | hi AleWarningLine gui=undercurl,bold guifg=orange
-        \ | hi NvimTreeNormal guifg=NONE guibg=NONE
         \ | hi Todo gui=bold
         \ | hi Visual guibg=#33467C
         \ | hi TSTypeBuiltin gui=NONE " set this for dracula

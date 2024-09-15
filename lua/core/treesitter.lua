@@ -15,7 +15,8 @@ local cfg = {
     "go",
     "dockerfile",
     "make",
-    "html"
+    "html",
+    "c_sharp"
     -- sql?
   }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   ignore_install = {'dart'},

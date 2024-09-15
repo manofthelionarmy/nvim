@@ -98,5 +98,9 @@ require'nvim-web-devicons'.set_icon({
     cterm_color = go_color,
     name = "Mod"
   },
+  ['cs'] =  {
+    icon = ' ',
+    name = 'c_sharp',
+  }
 })
 

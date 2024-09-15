@@ -121,7 +121,8 @@ let g:ale_linters={
       \ 'javascript': ['prettier', 'eslint'],
       \ 'javascriptreact': ['prettier', 'eslint'],
       \ 'go': ['gopls', 'revive', 'gofmt', 'golint'],
-      \ 'rust': ['analyzer']
+      \ 'rust': ['analyzer'],
+      \ 'cs': ['cspell', 'mcs'] 
       \}
 let g:ale_go_golangci_lint_executable = 'golangci-lint'
 let g:ale_go_golangci_lint_options = '' " don't use the default
@@ -135,7 +136,8 @@ let g:ale_fixers = {
       \ 'sql': ['pgformatter'],
       \ 'rust': ['rustfmt'],
       \ 'html': ['prettier'],
-      \ 'dart': ['trim_whitespace', 'dartfmt']
+      \ 'dart': ['trim_whitespace', 'dartfmt'],
+      \ 'cs': ['dotnet-format'] 
       \}
 let g:ale_java_checkstyle_config="/home/armando/.config/checkstyle/google_checks.xml"
 

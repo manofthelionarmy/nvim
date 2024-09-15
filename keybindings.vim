@@ -45,7 +45,7 @@ nnoremap <silent> <space>t` :lua require('telescope.builtin').buffers()<cr>
 nnoremap <silent> <leader>tf :lua require('modules/searchdir').find_files()<CR>
 nnoremap <silent> <leader>tt :Telescope find_files hidden=true<CR>
 nnoremap <silent> <Space>td :lua require('telescope.builtin').find_files({ cwd = vim.fn.expand('%:p:h'), hidden = true })<CR>
-nnoremap <silent> <Space>fb :Telescope file_browser<CR>
+nnoremap <silent> <Space>fb :Telescope file_browser cwd=%:h<CR>
 
 " Commentary key bindings
 nnoremap <silent> <leader>/ :Commentary<CR>

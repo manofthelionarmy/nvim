@@ -1,7 +1,7 @@
 lua << EOF
 require("catppuccin").setup {
   flavour = "frappe", -- latte, frappe, macchiato, mocha
-  transparent_background = true,
+  transparent_background = false,
   integrations = {
     nvimtree = true,
     telescope = true,
@@ -9,7 +9,6 @@ require("catppuccin").setup {
     mini = false,
     barbar = true,
     which_key = true,
-    --ts_rainbow2 = true,
     rainbow_delimiters = true,
     coc_nvim = true,
     dashboard = true,
@@ -30,12 +29,38 @@ require("catppuccin").setup {
       -- NvimTreeNormal = { bg = colors.none },
       TelescopeNormal = { bg = colors.base },
       TelescopeBorder = { bg = colors.base },
+      CocFloating = { bg = colors.base },
       -- TelescopeResultsBorder = { bg = colors.base },
       -- TelescopePromptBorder = { bg = colors.base },
       -- Normal = {bg="NONE", fg="NONE"},
       ALEVirtualTextError = {fg=colors.maroon, bg=colors.base},
       ALEVirtualTextInfo = {fg='#94e2d5', bg=colors.base},
-      ALEInfoSign = {fg='#94e2d5'}
+      ALEInfoSign = {fg='#94e2d5'},
+      -- Coc Completion
+      CocFloating = { bg = colors.surface0 },
+      PmenuSel = { bg = colors.surface1 },
+      Pmenu = { bg = colors.mantle },
+      CocPumShortcut = { fg = colors.mauve },
+      CocPumSearch = { fg = colors.maroon },
+      CocSymbolOperator = { fg = colors.yellow },
+      CocSymbolModule = { fg = colors.mauve },
+      CocSymbolDefault = { fg = colors.green },
+      CocSymbolSnippet = { fg = colors.green },
+
+      -- Telescope
+      TelescopeMatching = { fg = colors.flamingo },
+      TelescopeSelection = { fg = colors.text, bg = colors.surface0, bold = true },
+
+      TelescopePromptPrefix = { bg = colors.surface0, fg = colors.red },
+      TelescopePromptNormal = { bg = colors.surface0 },
+      TelescopeResultsNormal = { bg = colors.mantle },
+      TelescopePreviewNormal = { bg = colors.mantle },
+      TelescopePromptBorder = { bg = colors.surface0, fg = colors.surface0 },
+      TelescopeResultsBorder = { bg = colors.mantle, fg = colors.mantle },
+      TelescopePreviewBorder = { bg = colors.mantle, fg = colors.mantle },
+      TelescopePromptTitle = { fg = colors.peach },
+      TelescopeResultsTitle = { fg = colors.mantle },
+      TelescopePreviewTitle = { bg = colors.green, fg = colors.mantle },
     }
   end
 }
